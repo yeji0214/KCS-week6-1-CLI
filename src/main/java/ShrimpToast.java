@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public class ShrimpToast {
+public class ShrimpToast extends Toast {
+    public ShrimpToast() {
+        System.out.println("새우 토스트를 선택하셨습니다.");
+        setPrice(4900);
+    }
 }

@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="" />
+    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Cola.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PotatoPop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Side.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BaconBestToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaconBestToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BaconPotatoPizzaToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaconPotatoPizzaToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CornCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CornCheeseToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DeepCheeseBaconPotatoToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeepCheeseBaconPotatoToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FrenchHamCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FrenchHamCheeseToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HamSpecialToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HamSpecialToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShrimpToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShrimpToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Toast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Toast.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,12 +31,31 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "yeji0214"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/yeji0214/KCS-week6-1-CLI.git",
+    "accountId": "c281b59a-53e3-4497-98d4-e8b17afe2167"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2gb1twbauNHL2SLTHvHcEmAdsR2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -29,11 +64,37 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.KCS-week6-1-CLI [:Main.main()].executor": "Run",
+    "Gradle.KCS-week6-1-CLI [:Order.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "/Users/jeong-yeji/IdeaProjects/KCS-week6-1-CLI/src/main/java/Main.java",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.Order">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="KCS-week6-1-CLI.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Order" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Order" />
+      <module name="KCS-week6-1-CLI.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Order" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,5 +105,16 @@
       <updated>1715951683264</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

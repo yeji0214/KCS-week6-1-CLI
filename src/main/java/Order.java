@@ -210,12 +210,15 @@ public class Order {
                 }
             } else {
                 System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
-                scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
+                scanner.next();
             }
         }
     }
 
     public void showSideMenu() {
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
+
         String title = "<Side>";
         String potatoPop = "1. 포테이토 팝";
 
@@ -223,9 +226,29 @@ public class Order {
         System.out.println(title);
         System.out.println();
         System.out.println(potatoPop);
+        System.out.println();
+
+        while (true) {
+            System.out.print("주문할 사이드의 번호를 입력하세요: ");
+            if (scanner.hasNextInt()) {
+                choice = scanner.nextInt();
+                if (choice == 1) {
+                    new PotatoPop();
+                    return;
+                } else {
+                    System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                }
+            } else {
+                System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                scanner.next();
+            }
+        }
     }
 
     public void showDrinkMenu() {
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
+
         String title = "<Drink>";
         String americanoHot = "1. 아메리카노 hot";
         String americanoIce = "2. 아메리카노 ice";
@@ -247,6 +270,45 @@ public class Order {
         System.out.println(sprite);
         System.out.println(spriteZero);
         System.out.println(orangeJuice);
+        System.out.println();
+
+        while (true) {
+            System.out.print("주문할 음료의 번호를 입력하세요: ");
+            if (scanner.hasNextInt()) {
+                choice = scanner.nextInt();
+                switch (choice) {
+                    case 1:
+                        new AmericanoHot();
+                        return;
+                    case 2:
+                        new AmericanoIce();
+                        return;
+                    case 3:
+                        new IcedTea();
+                        return;
+                    case 4:
+                        new Cola();
+                        return;
+                    case 5:
+                        new ColaZero();
+                        return;
+                    case 6:
+                        new Sprite();
+                        return;
+                    case 7:
+                        new SpriteZero();
+                        return;
+                    case 8:
+                        new OrangeJuice();
+                        return;
+                    default:
+                        System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                }
+            } else {
+                System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                scanner.next();
+            }
+        }
     }
 
     public static void main(String[] args) {
