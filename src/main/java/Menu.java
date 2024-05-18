@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Menu {
     private int totalPrice = 0;
-    private StringBuilder receipt = new StringBuilder("<영수증>\n\n");
+    private StringBuilder receipt = new StringBuilder("< 영수증 >\n");
     private ArrayList<String> cart = new ArrayList<>();
 
     public void addItemToCart(String itemName, int price, int quantity) {
@@ -10,7 +10,16 @@ public class Menu {
         cart.add(itemName + " x " + quantity);
         totalPrice += totalItemPrice;
         receipt.append(itemName).append(" x ").append(quantity).append(" - ").append(totalItemPrice).append("원\n");
-        System.out.println(itemName + " " + quantity + "개가 장바구니에 담겼습니다.");
+        System.out.println(itemName + " x " + quantity + "이(가) 장바구니에 담겼습니다.");
+    }
+
+    public void addItemToCart(String itemName, int price, int quantity, boolean frenchBread, boolean scrambledEgg) {
+        int totalItemPrice = price * quantity;
+
+        cart.add(itemName + " x " + quantity);
+        totalPrice += totalItemPrice;
+        receipt.append(itemName).append(" x ").append(quantity).append(" - ").append(totalItemPrice).append("원\n");
+        System.out.println(itemName + " x " + quantity + "이(가) 장바구니에 담겼습니다.");
     }
 
     public void showReceipt() {
@@ -29,7 +38,7 @@ public class Menu {
     public void resetOrder() {
         totalPrice = 0;
         receipt.setLength(0);
-        receipt.append("<영수증>\n\n");
+        receipt.append("< 영수증 >\n");
         cart.clear();
     }
 }

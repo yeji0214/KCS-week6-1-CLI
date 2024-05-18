@@ -1,29 +1,29 @@
-public class Toast extends Menu {
-    private String bread;
-    private String egg;
+public class Toast {
+    private String name;
+    private int price;
+    private boolean canChooseBread;
+    private boolean canChooseEgg;
 
-    public Toast() {
-        bread = "기본(빵)";
-        egg = "기본(계란)";
+    public Toast(String name, int price, boolean canChooseBread, boolean canChooseEgg) {
+        this.name = name;
+        this.price = price;
+        this.canChooseBread = canChooseBread;
+        this.canChooseEgg = canChooseEgg;
     }
 
-    public String getBread() {
-        return bread;
+    public String getName() {
+        return name;
     }
 
-    public String getEgg() {
-        return egg;
+    public int getPrice() {
+        return price;
     }
 
-    public void setBread(String bread) {
-        this.bread = bread;
+    public boolean canChooseBread() {
+        return canChooseBread;
     }
 
-    public void setEgg(String egg) {
-        this.egg = egg;
-    }
-
-    private void choiceBread() {
-
+    public boolean canChooseEgg() {
+        return canChooseEgg;
     }
 }
