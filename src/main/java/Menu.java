@@ -2,14 +2,15 @@ import java.util.ArrayList;
 
 public class Menu {
     private int totalPrice = 0;
-    private StringBuilder receipt = new StringBuilder("< 영수증 >\n");
+    private StringBuilder receipt = new StringBuilder("<영수증>\n\n");
     private ArrayList<String> cart = new ArrayList<>();
 
-    public void addItemToCart(String itemName, int price) {
-        cart.add(itemName);
-        totalPrice += price;
-        receipt.append(itemName).append(" - ").append(price).append("원\n");
-        System.out.println(itemName + "이(가) 장바구니에 담겼습니다.");
+    public void addItemToCart(String itemName, int price, int quantity) {
+        int totalItemPrice = price * quantity;
+        cart.add(itemName + " x " + quantity);
+        totalPrice += totalItemPrice;
+        receipt.append(itemName).append(" x ").append(quantity).append(" - ").append(totalItemPrice).append("원\n");
+        System.out.println(itemName + " " + quantity + "개가 장바구니에 담겼습니다.");
     }
 
     public void showReceipt() {
@@ -28,7 +29,7 @@ public class Menu {
     public void resetOrder() {
         totalPrice = 0;
         receipt.setLength(0);
-        receipt.append("< 영수증 >\n");
+        receipt.append("<영수증>\n\n");
         cart.clear();
     }
 }

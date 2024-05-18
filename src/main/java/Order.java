@@ -148,86 +148,86 @@ public class Order {
                 switch (choice) {
                     case 1:
                         new PotatoSpecialToast();
-                        addItemToCart("감자 스페셜", 5000); // 예시 가격
+                        processOrder("감자 스페셜", 4700);
                         return;
                     case 2:
                         new BulgogiSpecialToast();
-                        addItemToCart("불고기 스페셜", 6000); // 예시 가격
+                        processOrder("불고기 스페셜", 5200);
                         return;
                     case 3:
                         new DoubleCheeseBulgogiToast();
-                        addItemToCart("더블치즈 불고기", 7000); // 예시 가격
+                        processOrder("더블치즈 불고기", 5200);
                         return;
                     case 4:
                         new ChickenSpecialToast();
-                        addItemToCart("치킨 스페셜", 6500); // 예시 가격
+                        processOrder("치킨 스페셜", 4800);
                         return;
                     case 5:
                         new HotBaconChickenToast();
-                        addItemToCart("핫 베이컨 치킨", 5500); // 예시 가격
+                        processOrder("핫 베이컨 치킨", 5900);
                         return;
                     case 6:
                         new HamCheeseToast();
-                        addItemToCart("햄치즈 토스트", 4000); // 예시 가격
+                        processOrder("햄치즈 토스트", 3400);
                         return;
                     case 7:
                         new FrenchHamCheeseToast();
-                        addItemToCart("프랜치 햄치즈", 4500); // 예시 가격
+                        processOrder("프랜치 햄치즈", 3800);
                         return;
                     case 8:
                         new HamSpecialToast();
-                        addItemToCart("햄스페셜 토스트", 5000); // 예시 가격
+                        processOrder("햄스페셜 토스트", 3800);
                         return;
                     case 9:
                         new BaconBestToast();
-                        addItemToCart("베이컨 베스트", 5500); // 예시 가격
+                        processOrder("베이컨 베스트", 4200);
                         return;
                     case 10:
                         new GrilledBulgogiToast();
-                        addItemToCart("그릴드 불고기", 6000); // 예시 가격
+                        processOrder("그릴드 불고기", 4600);
                         return;
                     case 11:
                         new GrilledBulgalbiToast();
-                        addItemToCart("그릴드 불갈비", 6500); // 예시 가격
+                        processOrder("그릴드 불갈비", 4900);
                         return;
                     case 12:
                         new BaconPotatoPizzaToast();
-                        addItemToCart("베이컨 포테이토 피자", 7000); // 예시 가격
+                        processOrder("베이컨 포테이토 피자", 5400);
                         return;
                     case 13:
                         new DeepCheeseBaconToast();
-                        addItemToCart("딥치즈 베이컨", 7500); // 예시 가격
+                        processOrder("딥치즈 베이컨", 4500);
                         return;
                     case 14:
                         new DeepCheeseBaconPotatoToast();
-                        addItemToCart("딥치즈 베이컨 포테이토", 8000); // 예시 가격
+                        processOrder("딥치즈 베이컨 포테이토", 5200);
                         return;
                     case 15:
                         new HamCheesePotatoToast();
-                        addItemToCart("햄치즈 포테이토", 5500); // 예시 가격
+                        processOrder("햄치즈 포테이토", 4300);
                         return;
                     case 16:
                         new HoneyGarlicHamCheeseToast();
-                        addItemToCart("허니갈릭 햄치즈", 6000); // 예시 가격
+                        processOrder("허니갈릭 햄치즈", 3900);
                         return;
                     case 17:
                         new CornCheeseToast();
-                        addItemToCart("콘치즈 토스트", 5000); // 예시 가격
+                        processOrder("콘치즈 토스트", 4600);
                         return;
                     case 18:
                         new ShrimpToast();
-                        addItemToCart("새우 토스트", 6500); // 예시 가격
+                        processOrder("새우 토스트", 4900);
                         return;
                     case 19:
                         new ChiliShrimpToast();
-                        addItemToCart("칠리새우 토스트", 7000); // 예시 가격
+                        processOrder("칠리새우 토스트", 4900);
                         return;
                     default:
                         System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
                 }
             } else {
                 System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
-                scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
+                scanner.next();
             }
         }
     }
@@ -250,14 +250,14 @@ public class Order {
                 choice = scanner.nextInt();
                 if (choice == 1) {
                     new PotatoPop();
-                    addItemToCart("포테이토 팝", 3000); // 예시 가격
+                    processOrder("포테이토 팝", 2200);
                     return;
                 } else {
                     System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
                 }
             } else {
                 System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
-                scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
+                scanner.next();
             }
         }
     }
@@ -295,49 +295,66 @@ public class Order {
                 switch (choice) {
                     case 1:
                         new AmericanoHot();
-                        addItemToCart("아메리카노 hot", 2000); // 예시 가격
+                        processOrder("아메리카노 hot", 2900);
                         return;
                     case 2:
                         new AmericanoIce();
-                        addItemToCart("아메리카노 ice", 2000); // 예시 가격
+                        processOrder("아메리카노 ice", 2900);
                         return;
                     case 3:
                         new IcedTea();
-                        addItemToCart("아이스티", 2500); // 예시 가격
+                        processOrder("아이스티", 2900);
                         return;
                     case 4:
                         new Cola();
-                        addItemToCart("콜라", 1500); // 예시 가격
+                        processOrder("콜라", 2000);
                         return;
                     case 5:
                         new ColaZero();
-                        addItemToCart("콜라 제로", 1500); // 예시 가격
+                        processOrder("콜라 제로", 2000);
                         return;
                     case 6:
                         new Sprite();
-                        addItemToCart("사이다", 1500); // 예시 가격
+                        processOrder("사이다", 2000);
                         return;
                     case 7:
                         new SpriteZero();
-                        addItemToCart("사이다 제로", 1500); // 예시 가격
+                        processOrder("사이다 제로", 2000);
                         return;
                     case 8:
                         new OrangeJuice();
-                        addItemToCart("오렌지 주스", 2500); // 예시 가격
+                        processOrder("오렌지 주스", 2600);
                         return;
                     default:
                         System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
                 }
             } else {
                 System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
-                scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
+                scanner.next();
             }
         }
     }
 
-    private void addItemToCart(String itemName, int price) {
+    private void processOrder(String itemName, int price) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println(itemName + " - " + price + "원");
+        int quantity = 0;
+
+        while (true) {
+            System.out.print("수량을 입력하세요 (1-10): ");
+            if (scanner.hasNextInt()) {
+                quantity = scanner.nextInt();
+                if (quantity >= 1 && quantity <= 10) {
+                    break;
+                } else {
+                    System.out.println("잘못된 입력입니다. 수량은 1에서 10 사이여야 합니다.");
+                }
+            } else {
+                System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                scanner.next();
+            }
+        }
+
+        System.out.println(itemName + " - " + price + "원 x " + quantity + " = " + (price * quantity) + "원");
         System.out.println("1. 담기 2. 주문하기 3. 취소");
 
         while (true) {
@@ -346,11 +363,11 @@ public class Order {
                 int choice = scanner.nextInt();
                 switch (choice) {
                     case 1:
-                        menu.addItemToCart(itemName, price);
+                        menu.addItemToCart(itemName, price, quantity);
                         showMenu();
                         return;
                     case 2:
-                        menu.addItemToCart(itemName, price);
+                        menu.addItemToCart(itemName, price, quantity);
                         menu.showReceipt();
                         System.exit(0);
                     case 3:
@@ -361,7 +378,7 @@ public class Order {
                 }
             } else {
                 System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
-                scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
+                scanner.next();
             }
         }
     }
