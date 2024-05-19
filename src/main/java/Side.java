@@ -1,7 +1,17 @@
 public class Side extends Menu {
-    private String ketchup;
+    private String name;
+    private int price;
 
-    public Side() {
-        ketchup = "케첩 O";
+    public Side(String name, int price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPrice() {
+        return price;
     }
 }

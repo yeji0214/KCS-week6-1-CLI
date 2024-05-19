@@ -9,8 +9,8 @@ public class Order {
     }
 
     private void greeting() {
-        String storeName = "                  이삭토스트 구파발점                  ";
-        String welcomeMessage = "            어서오세요~ 이삭토스트 구파발점입니다!          ";
+        String storeName = "                  이삭토스트 구파발역점                  ";
+        String welcomeMessage = "            어서오세요~ 이삭토스트 구파발역점입니다!          ";
         String promptMessage = "                   주문하시겠어요?                    ";
         String choice1 = "               1. 네!!";
         String choice2 = "               2. 아 잘못 들어왔습니다.";
@@ -230,8 +230,7 @@ public class Order {
             if (scanner.hasNextInt()) {
                 choice = scanner.nextInt();
                 if (choice == 1) {
-                    new PotatoPop();
-                    processOrder("포테이토 팝", 3000); // 예시 가격
+                    processOrder(new PotatoPop());
                     return;
                 } else {
                     System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
@@ -360,6 +359,76 @@ public class Order {
             } else {
                 System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
                 scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
+            }
+        }
+    }
+
+    private void processOrder(Side side) {
+        Scanner scanner = new Scanner(System.in);
+        String sideName = side.getName();
+        int quantity = 0;
+
+        while (true) {
+            System.out.print("옵션을 선택하세요 (1. 케첩 O, 2. 케첩 X): ");
+            if (scanner.hasNextInt()) {
+                int choice = scanner.nextInt();
+                if (choice == 1) {
+                    sideName += " (케첩 O)";
+                    break;
+                } else if (choice == 2) {
+                    sideName += " (케첩 X)";
+                    break;
+                } else {
+                    System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                }
+            } else {
+                System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                scanner.next();
+            }
+        }
+
+        while (true) {
+            System.out.print("수량을 입력하세요 (1-10): ");
+            if (scanner.hasNextInt()) {
+                quantity = scanner.nextInt();
+                if (quantity >= 1 && quantity <= 10) {
+                    break;
+                } else {
+                    System.out.println("잘못된 입력입니다. 수량은 1에서 10 사이여야 합니다.");
+                }
+            } else {
+                System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                scanner.next();
+            }
+        }
+
+        int finalPrice = side.getPrice();
+
+        System.out.println(sideName + " - " + finalPrice + "원 x " + quantity + " = " + (finalPrice * quantity) + "원");
+        System.out.println("1. 담기 2. 주문하기 3. 취소");
+
+        while (true) {
+            System.out.print("선택: ");
+            if (scanner.hasNextInt()) {
+                int choice = scanner.nextInt();
+                switch (choice) {
+                    case 1:
+                        menu.addItemToCart(sideName, finalPrice, quantity);
+                        showMenu();
+                        return;
+                    case 2:
+                        menu.addItemToCart(sideName, finalPrice, quantity);
+                        menu.showReceipt();
+                        System.exit(0);
+                    case 3:
+                        showMenu();
+                        return;
+                    default:
+                        System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                }
+            } else {
+                System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                scanner.next();
             }
         }
     }

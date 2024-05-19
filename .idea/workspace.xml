@@ -4,30 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Quantity selection function">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BaconBestToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaconBestToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BaconPotatoPizzaToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaconPotatoPizzaToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BulgogiSpecialToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BulgogiSpecialToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChickenSpecialToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChickenSpecialToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChiliShrimpToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChiliShrimpToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CornCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CornCheeseToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DeepCheeseBaconPotatoToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeepCheeseBaconPotatoToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DeepCheeseBaconToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeepCheeseBaconToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DoubleCheeseBulgogiToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DoubleCheeseBulgogiToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FrenchHamCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FrenchHamCheeseToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GrilledBulgalbiToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GrilledBulgalbiToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GrilledBulgogiToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GrilledBulgogiToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HamCheesePotatoToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HamCheesePotatoToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HamCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HamCheeseToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HamSpecialToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HamSpecialToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HoneyGarlicHamCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HoneyGarlicHamCheeseToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HotBaconChickenToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HotBaconChickenToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
+    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Toast bread, egg selection function">
       <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PotatoSpecialToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PotatoSpecialToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShrimpToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShrimpToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Toast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Toast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PotatoPop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PotatoPop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Side.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Side.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716027397917</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Toast bread, egg selection function">
+      <option name="closed" value="true" />
+      <created>1716045815199</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716045815199</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +142,7 @@
     <MESSAGE value="Add class for all menus" />
     <MESSAGE value="Basic order features (option X)" />
     <MESSAGE value="Quantity selection function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Quantity selection function" />
+    <MESSAGE value="Toast bread, egg selection function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Toast bread, egg selection function" />
   </component>
 </project>
