@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Toast bread, egg selection function">
+    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Side ketchup selection function">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AmericanoHot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AmericanoHot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AmericanoIce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AmericanoIce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Cola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ColaZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ColaZero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Drink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IcedTea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IcedTea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OrangeJuice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrangeJuice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PotatoPop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PotatoPop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Side.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Side.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SpriteZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpriteZero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716045815199</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Side ketchup selection function">
+      <option name="closed" value="true" />
+      <created>1716096149793</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716096149793</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,6 +159,7 @@
     <MESSAGE value="Basic order features (option X)" />
     <MESSAGE value="Quantity selection function" />
     <MESSAGE value="Toast bread, egg selection function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Toast bread, egg selection function" />
+    <MESSAGE value="Side ketchup selection function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Side ketchup selection function" />
   </component>
 </project>

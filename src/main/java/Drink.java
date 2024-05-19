@@ -1,7 +1,17 @@
 public class Drink extends Menu {
-    private String cup;
+    private String name;
+    private int price;
 
-    public Drink() {
-        cup = "일회용 컵";
+    public Drink(String name, int price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPrice() {
+        return price;
     }
 }
