@@ -1,6 +1,17 @@
 public class PotatoPop extends Side {
-    public PotatoPop() {
+    private boolean ketchup;
+
+    public PotatoPop(boolean ketchup) {
         super("포테이토 팝", 2200);
-        System.out.println("\n포테이토 팝을 선택하셨습니다.");
+        this.ketchup = ketchup;
+    }
+
+    public boolean hasKetchup() {
+        return ketchup;
+    }
+
+    @Override
+    public String getName() {
+        return super.getName() + (ketchup ? " (케첩 O)" : " (케첩 X)");
     }
 }
