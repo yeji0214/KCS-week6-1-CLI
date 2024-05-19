@@ -13,32 +13,13 @@ public class Menu {
         System.out.println(itemName + " x " + quantity + "이(가) 장바구니에 담겼습니다.");
     }
 
-//    public void addItemToCart(String itemName, int price, int quantity, boolean frenchBread, boolean scrambledEgg) {
-//        int totalItemPrice = price * quantity;
-//
-//        cart.add(itemName + " x " + quantity);
-//        totalPrice += totalItemPrice;
-//        receipt.append(itemName).append(" x ").append(quantity).append(" - ").append(totalItemPrice).append("원\n");
-//        System.out.println(itemName + " x " + quantity + "이(가) 장바구니에 담겼습니다.");
-//    }
-
-//    public void addSetToCart(String itemName, int toastPrice, boolean frenchBread, boolean scrambledEgg, int sidePrice, int drinkPrice, int quantity) {
-//        int totalItemPrice = toastPrice * quantity + sidePrice * quantity + drinkPrice * quantity;
-//
-//        itemName += " 세트";
-//        cart.add(itemName + " x " + quantity);
-//        totalPrice += totalItemPrice;
-//        receipt.append(itemName).append(" x ").append(quantity).append(" - ").append(totalItemPrice).append("원\n");
-//        System.out.println(itemName + " 세트 x " + quantity + "이(가) 장바구니에 담겼습니다.");
-//    }
-
     public void showReceipt() {
         String border = "**************************************************";
         System.out.println("\n" + border);
         System.out.println(receipt);
         System.out.println("총 가격: " + totalPrice + "원");
         System.out.println(border);
-        System.out.println("이용해 주셔서 감사합니다.");
+        System.out.println();
     }
 
     public int getTotalPrice() {
