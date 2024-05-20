@@ -4,19 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Change menu class creation format">
+    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Price modification (drink price in set, total price in set)">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AmericanoHot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AmericanoHot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AmericanoIce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AmericanoIce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Cola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ColaZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ColaZero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Drink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IcedTea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IcedTea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OrangeJuice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrangeJuice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SpriteZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpriteZero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AmericanoHot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/AmericanoHot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AmericanoIce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/AmericanoIce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BaconBestToast.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BaconPotatoPizzaToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/BaconPotatoPizzaToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BulgogiSpecialToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/BulgogiSpecialToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ChickenSpecialToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/ChickenSpecialToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ChiliShrimpToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/ChiliShrimpToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Cola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/Cola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ColaZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/ColaZero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CornCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/CornCheeseToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DeepCheeseBaconPotatoToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/DeepCheeseBaconPotatoToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DeepCheeseBaconToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/DeepCheeseBaconToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DoubleCheeseBulgogiToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/DoubleCheeseBulgogiToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Drink.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FrenchHamCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/FrenchHamCheeseToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GrilledBulgalbiToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/GrilledBulgalbiToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GrilledBulgogiToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/GrilledBulgogiToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HamCheesePotatoToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/HamCheesePotatoToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HamCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/HamCheeseToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HamSpecialToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/HamSpecialToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HoneyGarlicHamCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/HoneyGarlicHamCheeseToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HotBaconChickenToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/HotBaconChickenToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IcedTea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/IcedTea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OrangeJuice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/OrangeJuice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PotatoPop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PotatoSpecialToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/PotatoSpecialToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShrimpToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/ShrimpToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Side.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SpriteZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/SpriteZero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Toast.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,18 +82,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.KCS-week6-1-CLI [:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.KCS-week6-1-CLI [:Order.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/jeong-yeji/IdeaProjects/KCS-week6-1-CLI/src/main/java/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.KCS-week6-1-CLI [:Main.main()].executor": "Run",
+    "Gradle.KCS-week6-1-CLI [:Order.main()].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "/Users/jeong-yeji/IdeaProjects/KCS-week6-1-CLI/src/main/java/Main.java",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
-  <component name="RunManager" selected="Application.Order">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kiosk.menu" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.com.kiosk.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="KCS-week6-1-CLI.main" />
@@ -85,8 +114,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.kiosk.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kiosk.Main" />
+      <module name="KCS-week6-1-CLI.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kiosk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.kiosk.Main" />
         <item itemvalue="Application.Order" />
         <item itemvalue="Application.Main" />
       </list>
@@ -173,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716178155200</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Price modification (drink price in set, total price in set)">
+      <option name="closed" value="true" />
+      <created>1716182652589</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716182652589</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +248,7 @@
     <MESSAGE value="Toast set selection function" />
     <MESSAGE value="Payment function" />
     <MESSAGE value="Change menu class creation format" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change menu class creation format" />
+    <MESSAGE value="Price modification (drink price in set, total price in set)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Price modification (drink price in set, total price in set)" />
   </component>
 </project>
