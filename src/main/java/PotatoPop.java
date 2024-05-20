@@ -12,6 +12,15 @@ public class PotatoPop extends Side {
 
     @Override
     public String getName() {
-        return super.getName() + (ketchup ? " (케첩 O)" : " (케첩 X)");
+        return super.getName() + (ketchup ? "" : " (케첩 X)");
+    }
+
+    public void setKetchup(boolean ketchup) {
+        this.ketchup = ketchup;
+    }
+
+    @Override
+    public boolean canChooseKetchup() {
+        return true; // 포테이토 팝은 케첩 옵션 선택 가능
     }
 }

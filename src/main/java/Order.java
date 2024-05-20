@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.Scanner;
 
 public class Order {
@@ -93,118 +94,49 @@ public class Order {
     }
 
     public void showToastMenu() {
-        Scanner scanner = new Scanner(System.in);
-        int choice = 0;
-
-        String title = "<Toast>";
-        String potatoSpecialToast = "1. 감자 스페셜";
-        String bulgogiSpecialToast = "2. 불고기 스페셜";
-        String doubleCheeseBulgogiToast = "3. 더블치즈 불고기";
-        String chickenSpecialToast = "4. 치킨 스페셜";
-        String hotBaconChickenToast = "5. 핫 베이컨 치킨";
-        String hamCheeseToast = "6. 햄치즈 토스트";
-        String frenchHamCheeseToast = "7. 프랜치 햄치즈";
-        String hamSpecialToast = "8. 햄스페셜 토스트";
-        String baconBestToast = "9. 베이컨 베스트";
-        String grilledBulgogiToast = "10. 그릴드 불고기";
-        String grilledBulgalbiToast = "11. 그릴드 불갈비";
-        String baconPotatoPizzaToast = "12. 베이컨 포테이토 피자";
-        String deepCheeseBaconToast = "13. 딥치즈 베이컨";
-        String deepCheeseBaconPotatoToast = "14. 딥치즈 베이컨 포테이토";
-        String hamCheesePotatoToast = "15. 햄치즈 포테이토";
-        String honeyGarlicHamCheeseToast = "16. 허니갈릭 햄치즈";
-        String cornCheeseToast = "17. 콘치즈 토스트";
-        String shrimpToast = "18. 새우 토스트";
-        String chiliShrimpToast = "19. 칠리새우 토스트";
+        Toast[] toastMenu = {
+                new PotatoSpecialToast(),
+                new BulgogiSpecialToast(),
+                new DoubleCheeseBulgogiToast(),
+                new ChickenSpecialToast(),
+                new HotBaconChickenToast(),
+                new HamCheeseToast(),
+                new FrenchHamCheeseToast(),
+                new HamSpecialToast(),
+                new BaconBestToast(),
+                new GrilledBulgogiToast(),
+                new GrilledBulgalbiToast(),
+                new BaconPotatoPizzaToast(),
+                new DeepCheeseBaconToast(),
+                new DeepCheeseBaconPotatoToast(),
+                new HamCheesePotatoToast(),
+                new HoneyGarlicHamCheeseToast(),
+                new CornCheeseToast(),
+                new ShrimpToast(),
+                new ChiliShrimpToast()
+        };
 
         System.out.println(border);
-        System.out.println(title);
+        System.out.println("<Toast>");
         System.out.println();
-        System.out.println(potatoSpecialToast);
-        System.out.println(bulgogiSpecialToast);
-        System.out.println(doubleCheeseBulgogiToast);
-        System.out.println(chickenSpecialToast);
-        System.out.println(hotBaconChickenToast);
-        System.out.println(hamCheeseToast);
-        System.out.println(frenchHamCheeseToast);
-        System.out.println(hamSpecialToast);
-        System.out.println(baconBestToast);
-        System.out.println(grilledBulgogiToast);
-        System.out.println(grilledBulgalbiToast);
-        System.out.println(baconPotatoPizzaToast);
-        System.out.println(deepCheeseBaconToast);
-        System.out.println(deepCheeseBaconPotatoToast);
-        System.out.println(hamCheesePotatoToast);
-        System.out.println(honeyGarlicHamCheeseToast);
-        System.out.println(cornCheeseToast);
-        System.out.println(shrimpToast);
-        System.out.println(chiliShrimpToast);
+        for (int i = 0; i < toastMenu.length; i++) {
+            System.out.println((i + 1) + ". " + toastMenu[i].getName() + " - " + toastMenu[i].getPrice() + "원");
+        }
         System.out.println();
 
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
         while (true) {
             System.out.print("주문할 토스트의 번호를 입력하세요: ");
             if (scanner.hasNextInt()) {
                 choice = scanner.nextInt();
-                switch (choice) {
-                    case 1:
-                        selectToastOption(new PotatoSpecialToast());
-                        return;
-                    case 2:
-                        selectToastOption(new BulgogiSpecialToast());
-                        return;
-                    case 3:
-                        selectToastOption(new DoubleCheeseBulgogiToast());
-                        return;
-                    case 4:
-                        selectToastOption(new ChickenSpecialToast());
-                        return;
-                    case 5:
-                        selectToastOption(new HotBaconChickenToast());
-                        return;
-                    case 6:
-                        selectToastOption(new HamCheeseToast());
-                        return;
-                    case 7:
-                        selectToastOption(new FrenchHamCheeseToast());
-                        return;
-                    case 8:
-                        selectToastOption(new HamSpecialToast());
-                        return;
-                    case 9:
-                        selectToastOption(new BaconBestToast());
-                        return;
-                    case 10:
-                        selectToastOption(new GrilledBulgogiToast());
-                        return;
-                    case 11:
-                        selectToastOption(new GrilledBulgalbiToast());
-                        return;
-                    case 12:
-                        selectToastOption(new BaconPotatoPizzaToast());
-                        return;
-                    case 13:
-                        selectToastOption(new DeepCheeseBaconToast());
-                        return;
-                    case 14:
-                        selectToastOption(new DeepCheeseBaconPotatoToast());
-                        return;
-                    case 15:
-                        selectToastOption(new HamCheesePotatoToast());
-                        return;
-                    case 16:
-                        selectToastOption(new HoneyGarlicHamCheeseToast());
-                        return;
-                    case 17:
-                        selectToastOption(new CornCheeseToast());
-                        return;
-                    case 18:
-                        selectToastOption(new ShrimpToast());
-                        return;
-                    case 19:
-                        selectToastOption(new ChiliShrimpToast());
-                        return;
-                    default:
-                        System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                if (choice >= 1 && choice <= toastMenu.length) {
+                    Toast selectedToast = toastMenu[choice - 1];
+                    System.out.println("\n" + selectedToast.getName() + " 토스트를 선택하셨습니다.");
+                    selectToastOption(selectedToast);
+                    return;
+                } else {
+                    System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
                 }
             } else {
                 System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
@@ -215,7 +147,9 @@ public class Order {
 
     private void selectToastOption(Toast toast) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1. 단품 2. 세트");
+        System.out.println("1. 단품 - " + toast.getPrice() + "원");
+        System.out.println("2. 세트 - " + (toast.getPrice() + 2700) + "원");
+
         int choice = 0;
 
         while (true) {
@@ -302,28 +236,28 @@ public class Order {
             if (scanner.hasNextInt()) {
                 int choice = scanner.nextInt();
                 if (choice == 1) {
-                    boolean ketchup = false;
-                    while (true) {
-                        System.out.print("케첩을 추가하시겠습니까? (1. O, 2. X): ");
-                        if (scanner.hasNextInt()) {
-                            int ketchupChoice = scanner.nextInt();
-                            if (ketchupChoice == 1) {
-                                ketchup = true;
-                                toastSetName += " (케첩 O)";
-                                break;
-                            } else if (ketchupChoice == 2) {
-                                ketchup = false;
-                                toastSetName += " (케첩 X)";
-                                break;
+                    side = new PotatoPop(true); // 기본으로 케첩을 추가합니다.
+                    if (side.canChooseKetchup()) {
+                        while (true) {
+                            System.out.print("케첩을 추가하시겠습니까? (1. O, 2. X): ");
+                            if (scanner.hasNextInt()) {
+                                int ketchupChoice = scanner.nextInt();
+                                if (ketchupChoice == 1) {
+                                    ((PotatoPop) side).setKetchup(true);
+                                    break;
+                                } else if (ketchupChoice == 2) {
+                                    ((PotatoPop) side).setKetchup(false);
+                                    toastSetName += " (케첩 X)";
+                                    break;
+                                } else {
+                                    System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                                }
                             } else {
                                 System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                                scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
                             }
-                        } else {
-                            System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
-                            scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
                         }
                     }
-                    side = new PotatoPop(ketchup);
                     break;
                 } else {
                     System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
@@ -335,48 +269,38 @@ public class Order {
         }
 
         System.out.println("음료를 선택하세요:");
-        String drinkMenu = "1. 아메리카노 hot\n2. 아메리카노 ice\n3. 아이스티\n4. 콜라\n5. 콜라 제로\n6. 사이다\n7. 사이다 제로\n8. 오렌지 주스";
-        System.out.println(drinkMenu);
+        Drink[] drinkMenu = {
+                new AmericanoHot(),
+                new AmericanoIce(),
+                new IcedTea(),
+                new Cola(),
+                new ColaZero(),
+                new Sprite(),
+                new SpriteZero(),
+                new OrangeJuice()
+        };
+
+        for (int i = 0; i < drinkMenu.length; i++) {
+            System.out.println((i + 1) + ". " + drinkMenu[i].getName() + " - " + drinkMenu[i].getPrice() + "원");
+        }
+
         Drink drink = null;
 
         while (true) {
             System.out.print("선택: ");
             if (scanner.hasNextInt()) {
                 int choice = scanner.nextInt();
-                switch (choice) {
-                    case 1:
-                        drink = new AmericanoHot();
+                if (choice >= 1 && choice <= drinkMenu.length) {
+                    drink = drinkMenu[choice - 1];
+                    if (drink.getName().contains("아메리카노") || drink.getName().contains("아이스티")) {
                         finalToastPrice += 800;
-                        break;
-                    case 2:
-                        drink = new AmericanoIce();
-                        finalToastPrice += 800;
-                        break;
-                    case 3:
-                        drink = new IcedTea();
-                        finalToastPrice += 800;
-                        break;
-                    case 4:
-                        drink = new Cola();
-                        break;
-                    case 5:
-                        drink = new ColaZero();
-                        break;
-                    case 6:
-                        drink = new Sprite();
-                        break;
-                    case 7:
-                        drink = new SpriteZero();
-                        break;
-                    case 8:
-                        drink = new OrangeJuice();
+                    } else if (drink.getName().contains("오렌지 주스")) {
                         finalToastPrice += 600;
-                        break;
-                    default:
-                        System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
-                        continue;
+                    }
+                    break;
+                } else {
+                    System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
                 }
-                break;
             } else {
                 System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
                 scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
@@ -402,7 +326,7 @@ public class Order {
 
         int totalPrice = finalToastPrice * quantity;
 
-        System.out.println(toastSetName + " - " + totalPrice + "원 x " + quantity + " = " + (totalPrice) + "원");
+        System.out.println(toastSetName + " - " + totalPrice + "원 x " + quantity + "개 = " + (totalPrice) + "원");
         System.out.println("1. 담기 2. 주문하기 3. 취소");
 
         while (true) {
@@ -433,42 +357,49 @@ public class Order {
     }
 
     public void showSideMenu() {
-        Scanner scanner = new Scanner(System.in);
-        int choice = 0;
 
-        String title = "<Side>";
-        String potatoPop = "1. 포테이토 팝";
+        Side[] sideMenu = {
+                new PotatoPop(true)
+        };
 
         System.out.println(border);
-        System.out.println(title);
+        System.out.println("<Side>");
         System.out.println();
-        System.out.println(potatoPop);
+        for (int i = 0; i < sideMenu.length; i++) {
+            System.out.println((i + 1) + ". " + sideMenu[i].getName() + " - " + sideMenu[i].getPrice() + "원");
+        }
+        System.out.println();
+
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
 
         while (true) {
             System.out.print("주문할 사이드의 번호를 입력하세요: ");
             if (scanner.hasNextInt()) {
                 choice = scanner.nextInt();
-                if (choice == 1) {
-                    boolean ketchup = false;
-                    while (true) {
-                        System.out.print("케첩을 추가하시겠습니까? (1. O, 2. X): ");
-                        if (scanner.hasNextInt()) {
-                            int ketchupChoice = scanner.nextInt();
-                            if (ketchupChoice == 1) {
-                                ketchup = true;
-                                break;
-                            } else if (ketchupChoice == 2) {
-                                ketchup = false;
-                                break;
+                if (choice >= 1 && choice <= sideMenu.length) {
+                    Side selectedSide = sideMenu[choice - 1];
+                    if (selectedSide.canChooseKetchup()) {
+                        while (true) {
+                            System.out.print("케첩을 추가하시겠습니까? (1. O, 2. X): ");
+                            if (scanner.hasNextInt()) {
+                                int ketchupChoice = scanner.nextInt();
+                                if (ketchupChoice == 1) {
+                                    ((PotatoPop) selectedSide).setKetchup(true);
+                                    break;
+                                } else if (ketchupChoice == 2) {
+                                    ((PotatoPop) selectedSide).setKetchup(false);
+                                    break;
+                                } else {
+                                    System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                                }
                             } else {
                                 System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                                scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
                             }
-                        } else {
-                            System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
-                            scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
                         }
                     }
-                    processOrder(new PotatoPop(ketchup));
+                    processOrder(selectedSide);
                     return;
                 } else {
                     System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
@@ -481,69 +412,38 @@ public class Order {
     }
 
     public void showDrinkMenu() {
-        Scanner scanner = new Scanner(System.in);
-        int choice = 0;
-
-        String title = "<Drink>";
-        String americanoHot = "1. 아메리카노 hot";
-        String americanoIce = "2. 아메리카노 ice";
-        String icedTea = "3. 아이스티";
-        String cola = "4. 콜라";
-        String colaZero = "5. 콜라 제로";
-        String sprite = "6. 사이다";
-        String spriteZero = "7. 사이다 제로";
-        String orangeJuice = "8. 오렌지 주스";
+        Drink[] drinkMenu = {
+                new AmericanoHot(),
+                new AmericanoIce(),
+                new IcedTea(),
+                new Cola(),
+                new ColaZero(),
+                new Sprite(),
+                new SpriteZero(),
+                new OrangeJuice()
+        };
 
         System.out.println(border);
-        System.out.println(title);
+        System.out.println("<Drink>");
         System.out.println();
-        System.out.println(americanoHot);
-        System.out.println(americanoIce);
-        System.out.println(icedTea);
-        System.out.println(cola);
-        System.out.println(colaZero);
-        System.out.println(sprite);
-        System.out.println(spriteZero);
-        System.out.println(orangeJuice);
+        for (int i = 0; i < drinkMenu.length; i++) {
+            System.out.println((i + 1) + ". " + drinkMenu[i].getName() + " - " + drinkMenu[i].getPrice() + "원");
+        }
+        System.out.println();
 
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
         while (true) {
             System.out.print("주문할 음료의 번호를 입력하세요: ");
             if (scanner.hasNextInt()) {
                 choice = scanner.nextInt();
-                switch (choice) {
-                    case 1:
-                        processOrder(new AmericanoHot());
-                        return;
-                    case 2:
-                        new AmericanoIce();
-                        processOrder(new AmericanoIce());
-                        return;
-                    case 3:
-                        new IcedTea();
-                        processOrder(new IcedTea());
-                        return;
-                    case 4:
-                        new Cola();
-                        processOrder(new Cola());
-                        return;
-                    case 5:
-                        new ColaZero();
-                        processOrder(new ColaZero());
-                        return;
-                    case 6:
-                        new Sprite();
-                        processOrder(new Sprite());
-                        return;
-                    case 7:
-                        new SpriteZero();
-                        processOrder(new SpriteZero());
-                        return;
-                    case 8:
-                        new OrangeJuice();
-                        processOrder(new OrangeJuice());
-                        return;
-                    default:
-                        System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                if (choice >= 1 && choice <= drinkMenu.length) {
+                    Drink selectedDrink = drinkMenu[choice - 1];
+                    System.out.println("\n" + selectedDrink.getName() + " 음료를 선택하셨습니다.");
+                    processOrder(selectedDrink);
+                    return;
+                } else {
+                    System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
                 }
             } else {
                 System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
@@ -622,7 +522,7 @@ public class Order {
         if (frenchBread) finalPrice += 500;
         if (scrambledEgg) finalPrice += 600;
 
-        System.out.println(toastName + " - " + finalPrice + "원 x " + quantity + " = " + (finalPrice * quantity) + "원");
+        System.out.println(toastName + " - " + finalPrice + "원 x " + quantity + "개 = " + (finalPrice * quantity) + "원");
         System.out.println("1. 담기 2. 주문하기 3. 취소");
 
         while (true) {
@@ -674,7 +574,7 @@ public class Order {
 
         int finalPrice = side.getPrice();
 
-        System.out.println(sideName + " - " + finalPrice + "원 x " + quantity + " = " + (finalPrice * quantity) + "원");
+        System.out.println(sideName + " - " + finalPrice + "원 x " + quantity + "개 = " + (finalPrice * quantity) + "원");
         System.out.println("1. 담기 2. 주문하기 3. 취소");
 
         while (true) {
@@ -725,7 +625,7 @@ public class Order {
             }
         }
 
-        System.out.println(drinkName + " - " + price + "원 x " + quantity + " = " + (price * quantity) + "원");
+        System.out.println(drinkName + " - " + price + "원 x " + quantity + "개 = " + (price * quantity) + "원");
         System.out.println("1. 담기 2. 주문하기 3. 취소");
 
         while (true) {
