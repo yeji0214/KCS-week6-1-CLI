@@ -10,7 +10,7 @@ public class Menu {
         cart.add(itemName + " x " + quantity);
         totalPrice += totalItemPrice;
         receipt.append(itemName).append(" x ").append(quantity).append(" - ").append(totalItemPrice).append("원\n");
-        System.out.println(itemName + " x " + quantity + "이(가) 장바구니에 담겼습니다.");
+        System.out.println(itemName + " x " + quantity + "개가 장바구니에 담겼습니다.");
     }
 
     public void showReceipt() {

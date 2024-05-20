@@ -4,36 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Payment function">
+    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Change menu class creation format">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AmericanoHot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AmericanoHot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AmericanoIce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AmericanoIce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BaconBestToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaconBestToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BaconPotatoPizzaToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaconPotatoPizzaToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BulgogiSpecialToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BulgogiSpecialToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChickenSpecialToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChickenSpecialToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChiliShrimpToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChiliShrimpToast.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Cola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cola.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ColaZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ColaZero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CornCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CornCheeseToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DeepCheeseBaconPotatoToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeepCheeseBaconPotatoToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DeepCheeseBaconToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeepCheeseBaconToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DoubleCheeseBulgogiToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DoubleCheeseBulgogiToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FrenchHamCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FrenchHamCheeseToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GrilledBulgalbiToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GrilledBulgalbiToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GrilledBulgogiToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GrilledBulgogiToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HamCheesePotatoToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HamCheesePotatoToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HamCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HamCheeseToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HamSpecialToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HamSpecialToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HoneyGarlicHamCheeseToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HoneyGarlicHamCheeseToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HotBaconChickenToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HotBaconChickenToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Drink.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IcedTea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IcedTea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/OrangeJuice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrangeJuice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PotatoPop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PotatoPop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PotatoSpecialToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PotatoSpecialToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShrimpToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShrimpToast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Side.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Side.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SpriteZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpriteZero.java" afterDir="false" />
     </list>
@@ -184,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716117909144</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Change menu class creation format">
+      <option name="closed" value="true" />
+      <created>1716178155200</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716178155200</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,6 +196,7 @@
     <MESSAGE value="processOrder method overloading" />
     <MESSAGE value="Toast set selection function" />
     <MESSAGE value="Payment function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Payment function" />
+    <MESSAGE value="Change menu class creation format" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change menu class creation format" />
   </component>
 </project>

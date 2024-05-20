@@ -281,7 +281,7 @@ public class Order {
         };
 
         for (int i = 0; i < drinkMenu.length; i++) {
-            System.out.println((i + 1) + ". " + drinkMenu[i].getName() + " - " + drinkMenu[i].getPrice() + "원");
+            System.out.println((i + 1) + ". " + drinkMenu[i].getName() + " (+" + drinkMenu[i].getSetPrice() + "원)");
         }
 
         Drink drink = null;
@@ -326,7 +326,7 @@ public class Order {
 
         int totalPrice = finalToastPrice * quantity;
 
-        System.out.println(toastSetName + " - " + totalPrice + "원 x " + quantity + "개 = " + (totalPrice) + "원");
+        System.out.println(toastSetName + " - " + finalToastPrice + "원 x " + quantity + "개 = " + (totalPrice) + "원");
         System.out.println("1. 담기 2. 주문하기 3. 취소");
 
         while (true) {
