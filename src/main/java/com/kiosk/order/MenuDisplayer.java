@@ -3,6 +3,7 @@ package com.kiosk.order;
 import com.kiosk.menu.Toast;
 import com.kiosk.menu.Side;
 import com.kiosk.menu.Drink;
+import com.kiosk.menu.drink.*;
 import com.kiosk.menu.side.PotatoPop;
 import com.kiosk.menu.toast.*;
 
@@ -10,6 +11,7 @@ public class MenuDisplayer {
     private final String border = "**************************************************";
     private Toast[] toasts;
     private Side[] sides;
+    private Drink[] drinks;
 
     // 메인 메뉴 (카테고리) 보여주기
     public void showMainMenu() {
@@ -84,13 +86,28 @@ public class MenuDisplayer {
     }
 
     // 음료 메뉴 보여주기
-    public void showDrinkMenu(Drink[] drinkMenu) {
+    public void showDrinkMenu() {
+        drinks = new Drink[]{
+                new AmericanoHot(),
+                new AmericanoIce(),
+                new IcedTea(),
+                new Cola(),
+                new ColaZero(),
+                new Sprite(),
+                new SpriteZero(),
+                new OrangeJuice()
+        };
+
         System.out.println(border);
         System.out.println("<Drink>");
         System.out.println();
-        for (int i = 0; i < drinkMenu.length; i++) {
-            System.out.println((i + 1) + ". " + drinkMenu[i].getName() + " - " + drinkMenu[i].getPrice() + "원");
+        for (int i = 0; i < drinks.length; i++) {
+            System.out.println((i + 1) + ". " + drinks[i].getName() + " - " + drinks[i].getPrice() + "원");
         }
         System.out.println();
+    }
+
+    public Drink[] getDrinks() {
+        return drinks;
     }
 }

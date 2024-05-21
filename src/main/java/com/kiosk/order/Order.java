@@ -1,9 +1,5 @@
 package com.kiosk.order;
 
-import com.kiosk.order.InputHandler;
-import com.kiosk.order.Menu;
-import com.kiosk.order.PaymentProcessor;
-import com.kiosk.order.MenuDisplayer;
 import com.kiosk.util.Constants;
 
 public class Order {
@@ -11,6 +7,7 @@ public class Order {
     private InputHandler inputHandler;
     private ToastOrderProcessor toastOrderProcessor;
     private SideOrderProcessor sideOrderProcessor;
+    private DrinkOrderProcessor drinkOrderProcessor;
     private PaymentProcessor paymentProcessor;
 
     public Order() {
@@ -21,6 +18,7 @@ public class Order {
         paymentProcessor = new PaymentProcessor(menu);
         toastOrderProcessor = new ToastOrderProcessor(inputHandler, menu, toastOptionSelector, paymentProcessor, this);
         sideOrderProcessor = new SideOrderProcessor(inputHandler, menu, sideOptionSelector, paymentProcessor, this);
+        drinkOrderProcessor = new DrinkOrderProcessor(inputHandler, menu, paymentProcessor, this);
     }
 
     public void start() {
@@ -67,7 +65,7 @@ public class Order {
                 sideOrderProcessor.processSideOrder();
                 break;
             } else if (choice == 3) {
-                // Drink menu processing
+                drinkOrderProcessor.processDrinkOrder();
                 break;
             } else {
                 System.out.println(Constants.INPUT_ERROR);
