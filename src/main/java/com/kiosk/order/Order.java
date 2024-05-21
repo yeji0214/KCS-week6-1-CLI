@@ -40,7 +40,7 @@ public class Order {
 
     private void getUserInput() {
         while (true) {
-            int choice = inputHandler.getIntInput("선택: ");
+            int choice = inputHandler.getIntInput(Constants.SELECT_PROMPT);
             if (choice == 1) {
                 showMenu();
                 break;
@@ -57,7 +57,7 @@ public class Order {
         MenuDisplayer menuDisplayer = new MenuDisplayer();
         menuDisplayer.showMainMenu();
         while (true) {
-            int choice = inputHandler.getIntInput("주문할 카테고리의 번호를 입력하세요: ");
+            int choice = inputHandler.getIntInput(Constants.MENU_PROMPT);
             if (choice == 1) {
                 toastOrderProcessor.processToastOrder();
                 break;

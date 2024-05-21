@@ -13,7 +13,7 @@ public class InputHandler {
                 return scanner.nextInt();
             } else {
                 System.out.println(Constants.INPUT_ERROR);
-                scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
+                scanner.next();
             }
         }
     }
@@ -32,24 +32,24 @@ public class InputHandler {
                 }
             } else {
                 System.out.println(Constants.INPUT_ERROR);
-                scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
+                scanner.next();
             }
         }
     }
 
     public int getQuantity() {
         while (true) {
-            System.out.print("수량을 입력하세요 (1-10): ");
+            System.out.print(Constants.QUANTITY_PROMPT);
             if (scanner.hasNextInt()) {
                 int quantity = scanner.nextInt();
                 if (quantity >= 1 && quantity <= 10) {
                     return quantity;
                 } else {
-                    System.out.println("잘못된 입력입니다. 수량은 1에서 10 사이여야 합니다.");
+                    System.out.println(Constants.INPUT_QUANTITY_ERROR);
                 }
             } else {
                 System.out.println(Constants.INPUT_ERROR);
-                scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
+                scanner.next();
             }
         }
     }

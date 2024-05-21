@@ -1,9 +1,9 @@
 package com.kiosk.order;
 
 import com.kiosk.menu.MenuItem;
-
 import java.util.ArrayList;
 import java.util.List;
+import com.kiosk.util.Constants;
 
 public class Menu {
     private final List<MenuItem> cart = new ArrayList<>();
@@ -15,11 +15,12 @@ public class Menu {
     }
 
     public void showReceipt() {
-        System.out.println("영수증:");
+        System.out.println(Constants.BORDER);
+        System.out.println(Constants.RECEIPT_TITLE);
         for (MenuItem item : cart) {
             System.out.println(item.getName() + " - " + item.getPrice() + "원 x " + item.getQuantity() + "개 = " + (item.getPrice() * item.getQuantity()) + "원");
         }
-        System.out.println("총 금액: " + totalPrice + "원");
+        System.out.println(Constants.TOTAL_AMOUNT + totalPrice + "원");
     }
 
     public int getTotalPrice() {
