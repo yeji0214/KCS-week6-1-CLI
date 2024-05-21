@@ -6,7 +6,7 @@ public class PotatoPop extends Side {
     private boolean ketchup;
 
     public PotatoPop(boolean ketchup) {
-        super("포테이토 팝", 2200);
+        super("포테이토 팝", 2200, 0);
         this.ketchup = ketchup;
     }
 

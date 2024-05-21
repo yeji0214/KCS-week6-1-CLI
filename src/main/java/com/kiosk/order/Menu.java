@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Menu {
-    private List<MenuItem> cart = new ArrayList<>();
+    private final List<MenuItem> cart = new ArrayList<>();
     private int totalPrice = 0;
 
     public void addItemToCart(String name, int price, int quantity) {
