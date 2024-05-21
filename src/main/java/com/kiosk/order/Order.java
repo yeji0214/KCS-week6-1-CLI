@@ -186,37 +186,75 @@ public class Order {
         toastOptionSelector.selectToastOptions(toast);
         int quantity = inputHandler.getQuantity();
         System.out.println(toast.getName() + " - " + toast.getPrice() + "원 x " + quantity + "개 = " + (toast.getPrice() * quantity) + "원");
-        menu.addItemToCart(toast.getName(), toast.getPrice(), quantity);
-        afterOrder(toast.getName(), toast.getPrice(), quantity);
+        System.out.println("1. 담기 2. 주문하기 3. 취소");
+
+        while (true) {
+            int choice = inputHandler.getIntInput("선택: ");
+            switch (choice) {
+                case 1:
+                    menu.addItemToCart(toast.getName(), toast.getPrice(), quantity);
+                    System.out.println(toast.getName() + " " + quantity + "개가 장바구니에 담겼습니다.");
+                    showMenu();
+                    return;
+                case 2:
+                    menu.addItemToCart(toast.getName(), toast.getPrice(), quantity);
+                    System.out.println(toast.getName() + " " + quantity + "개가 장바구니에 담겼습니다.");
+                    menu.showReceipt();
+                    paymentProcessor.processPayment(menu.getTotalPrice());
+                    return;
+                case 3:
+                    showMenu();
+                    return;
+                default:
+                    System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+            }
+        }
     }
 
     private void processOrder(Side side) {
         int quantity = inputHandler.getQuantity();
         System.out.println(side.getName() + " - " + side.getPrice() + "원 x " + quantity + "개 = " + (side.getPrice() * quantity) + "원");
-        menu.addItemToCart(side.getName(), side.getPrice(), quantity);
-        afterOrder(side.getName(), side.getPrice(), quantity);
+        System.out.println("1. 담기 2. 주문하기 3. 취소");
+
+        while (true) {
+            int choice = inputHandler.getIntInput("선택: ");
+            switch (choice) {
+                case 1:
+                    menu.addItemToCart(side.getName(), side.getPrice(), quantity);
+                    System.out.println(side.getName() + " " + quantity + "개가 장바구니에 담겼습니다.");
+                    showMenu();
+                    return;
+                case 2:
+                    menu.addItemToCart(side.getName(), side.getPrice(), quantity);
+                    System.out.println(side.getName() + " " + quantity + "개가 장바구니에 담겼습니다.");
+                    menu.showReceipt();
+                    paymentProcessor.processPayment(menu.getTotalPrice());
+                    return;
+                case 3:
+                    showMenu();
+                    return;
+                default:
+                    System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+            }
+        }
     }
 
     private void processOrder(Drink drink) {
         int quantity = inputHandler.getQuantity();
         System.out.println(drink.getName() + " - " + drink.getPrice() + "원 x " + quantity + "개 = " + (drink.getPrice() * quantity) + "원");
-        menu.addItemToCart(drink.getName(), drink.getPrice(), quantity);
-        afterOrder(drink.getName(), drink.getPrice(), quantity);
-    }
-
-    private void afterOrder(String name, int price, int quantity) {
         System.out.println("1. 담기 2. 주문하기 3. 취소");
+
         while (true) {
             int choice = inputHandler.getIntInput("선택: ");
             switch (choice) {
                 case 1:
-//                    menu.addItemToCart(name, price, quantity);
-                    System.out.println(name + " " + quantity + "개가 장바구니에 담겼습니다.");
+                    menu.addItemToCart(drink.getName(), drink.getPrice(), quantity);
+                    System.out.println(drink.getName() + " " + quantity + "개가 장바구니에 담겼습니다.");
                     showMenu();
                     return;
                 case 2:
-//                    menu.addItemToCart(name, price, quantity);
-                    System.out.println(name + " " + quantity + "개가 장바구니에 담겼습니다.");
+                    menu.addItemToCart(drink.getName(), drink.getPrice(), quantity);
+                    System.out.println(drink.getName() + " " + quantity + "개가 장바구니에 담겼습니다.");
                     menu.showReceipt();
                     paymentProcessor.processPayment(menu.getTotalPrice());
                     return;

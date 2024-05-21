@@ -6,18 +6,20 @@ public class InputHandler {
     private final Scanner scanner = new Scanner(System.in);
 
     public int getIntInput(String prompt) {
-        System.out.print(prompt);
-        while (!scanner.hasNextInt()) {
-            System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
-            scanner.next();
+        while (true) {
             System.out.print(prompt);
+            if (scanner.hasNextInt()) {
+                return scanner.nextInt();
+            } else {
+                System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
+            }
         }
-        return scanner.nextInt();
     }
 
     public boolean getBooleanInput(String prompt) {
-        System.out.print(prompt);
         while (true) {
+            System.out.print(prompt);
             if (scanner.hasNextInt()) {
                 int choice = scanner.nextInt();
                 if (choice == 1) {
@@ -29,12 +31,25 @@ public class InputHandler {
                 }
             } else {
                 System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
-                scanner.next();
+                scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
             }
         }
     }
 
     public int getQuantity() {
-        return getIntInput("수량을 입력하세요 (1-10): ");
+        while (true) {
+            System.out.print("수량을 입력하세요 (1-10): ");
+            if (scanner.hasNextInt()) {
+                int quantity = scanner.nextInt();
+                if (quantity >= 1 && quantity <= 10) {
+                    return quantity;
+                } else {
+                    System.out.println("잘못된 입력입니다. 수량은 1에서 10 사이여야 합니다.");
+                }
+            } else {
+                System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
+                scanner.next(); // 잘못된 입력을 소비하고 넘어갑니다.
+            }
+        }
     }
 }
