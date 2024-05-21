@@ -7,40 +7,27 @@ import com.kiosk.menu.drink.*;
 import com.kiosk.menu.side.PotatoPop;
 
 public class SetOrderProcessor {
-    private Menu menu;
-    private InputHandler inputHandler;
-    private ToastOptionSelector toastOptionSelector;
-    private Order order;
+    private final Menu menu;
+    private final InputHandler inputHandler;
+    private final ToastOptionSelector toastOptionSelector;
+    private final SideOptionSelector sideOptionSelector;
+    private final Order order;
 
-    public SetOrderProcessor(Menu menu, InputHandler inputHandler, ToastOptionSelector toastOptionSelector, Order order) {
+    public SetOrderProcessor(Menu menu, InputHandler inputHandler, ToastOptionSelector toastOptionSelector, SideOptionSelector sideOptionSelector, Order order) {
         this.menu = menu;
         this.inputHandler = inputHandler;
         this.toastOptionSelector = toastOptionSelector;
+        this.sideOptionSelector = sideOptionSelector;
         this.order = order;
     }
 
     public void processSetOrder(Toast toast) {
         int quantity = 0;
-        int finalToastPrice = toast.getPrice() + 2700;
-        boolean frenchBread = false;
-        boolean scrambledEgg = false;
         String toastSetName = toast.getName() + " 세트";
+        toastOptionSelector.selectToastOptions(toast);
 
-        if (toast.canChooseBread()) {
-            frenchBread = inputHandler.getBooleanInput("빵을 선택하세요 (1. 기본, 2. 프렌치빵(+500원)): ");
-            if (frenchBread) {
-                toastSetName += " (프렌치빵)";
-                finalToastPrice += 500;
-            }
-        }
+        int finalToastPrice = toast.getPrice() + 2700;
 
-        if (toast.canChooseEgg()) {
-            scrambledEgg = inputHandler.getBooleanInput("계란을 선택하세요 (1. 기본, 2. 스크램블(+600원)): ");
-            if (scrambledEgg) {
-                toastSetName += " (스크램블)";
-                finalToastPrice += 600;
-            }
-        }
 
         Side[] sideMenu = { new PotatoPop(true) };
         System.out.println("사이드를 선택하세요:");

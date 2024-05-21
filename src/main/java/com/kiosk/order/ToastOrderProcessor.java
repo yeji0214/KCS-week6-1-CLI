@@ -7,6 +7,7 @@ public class ToastOrderProcessor {
     private InputHandler inputHandler;
     private Menu menu;
     private ToastOptionSelector toastOptionSelector;
+    private SideOptionSelector sideOptionSelector;
     private PaymentProcessor paymentProcessor;
     private Order order;
 
@@ -14,6 +15,7 @@ public class ToastOrderProcessor {
         this.inputHandler = inputHandler;
         this.menu = menu;
         this.toastOptionSelector = toastOptionSelector;
+        this.sideOptionSelector = sideOptionSelector;
         this.paymentProcessor = paymentProcessor;
         this.order = order;
     }
@@ -80,7 +82,7 @@ public class ToastOrderProcessor {
                 return;
             } else if (choice == 2) {
                 System.out.println("\n" + toast.getName() + " 세트를 선택하셨습니다.");
-                new SetOrderProcessor(menu, inputHandler, toastOptionSelector, order).processSetOrder(toast);
+                new SetOrderProcessor(menu, inputHandler, toastOptionSelector, sideOptionSelector, order).processSetOrder(toast);
                 return;
             } else {
                 System.out.println(Constants.INPUT_ERROR);

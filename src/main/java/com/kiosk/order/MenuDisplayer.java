@@ -3,11 +3,13 @@ package com.kiosk.order;
 import com.kiosk.menu.Toast;
 import com.kiosk.menu.Side;
 import com.kiosk.menu.Drink;
+import com.kiosk.menu.side.PotatoPop;
 import com.kiosk.menu.toast.*;
 
 public class MenuDisplayer {
     private final String border = "**************************************************";
     private Toast[] toasts;
+    private Side[] sides;
 
     // 메인 메뉴 (카테고리) 보여주기
     public void showMainMenu() {
@@ -63,14 +65,22 @@ public class MenuDisplayer {
     }
 
     // 사이드 메뉴 보여주기
-    public void showSideMenu(Side[] sideMenu) {
+    public void showSideMenu() {
+        sides = new Side[]{
+                new PotatoPop(true)
+        };
+
         System.out.println(border);
         System.out.println("<Side>");
         System.out.println();
-        for (int i = 0; i < sideMenu.length; i++) {
-            System.out.println((i + 1) + ". " + sideMenu[i].getName() + " - " + sideMenu[i].getPrice() + "원");
+        for (int i = 0; i < sides.length; i++) {
+            System.out.println((i + 1) + ". " + sides[i].getName() + " - " + sides[i].getPrice() + "원");
         }
         System.out.println();
+    }
+
+    public Side[] getSides() {
+        return sides;
     }
 
     // 음료 메뉴 보여주기

@@ -10,14 +10,17 @@ public class Order {
     private Menu menu;
     private InputHandler inputHandler;
     private ToastOrderProcessor toastOrderProcessor;
+    private SideOrderProcessor sideOrderProcessor;
     private PaymentProcessor paymentProcessor;
 
     public Order() {
         menu = new Menu();
         inputHandler = new InputHandler();
         ToastOptionSelector toastOptionSelector = new ToastOptionSelector(inputHandler);
+        SideOptionSelector sideOptionSelector = new SideOptionSelector(inputHandler);
         paymentProcessor = new PaymentProcessor(menu);
         toastOrderProcessor = new ToastOrderProcessor(inputHandler, menu, toastOptionSelector, paymentProcessor, this);
+        sideOrderProcessor = new SideOrderProcessor(inputHandler, menu, sideOptionSelector, paymentProcessor, this);
     }
 
     public void start() {
@@ -61,7 +64,7 @@ public class Order {
                 toastOrderProcessor.processToastOrder();
                 break;
             } else if (choice == 2) {
-                // Side menu processing
+                sideOrderProcessor.processSideOrder();
                 break;
             } else if (choice == 3) {
                 // Drink menu processing
