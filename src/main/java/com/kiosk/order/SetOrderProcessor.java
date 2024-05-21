@@ -7,13 +7,15 @@ import com.kiosk.menu.drink.*;
 import com.kiosk.menu.side.PotatoPop;
 
 public class SetOrderProcessor {
-    private final Menu menu;
-    private final InputHandler inputHandler;
-    private final Order order;
+    private Menu menu;
+    private InputHandler inputHandler;
+    private ToastOptionSelector toastOptionSelector;
+    private Order order;
 
-    public SetOrderProcessor(Menu menu, Order order) {
+    public SetOrderProcessor(Menu menu, InputHandler inputHandler, ToastOptionSelector toastOptionSelector, Order order) {
         this.menu = menu;
-        this.inputHandler = new InputHandler();
+        this.inputHandler = inputHandler;
+        this.toastOptionSelector = toastOptionSelector;
         this.order = order;
     }
 

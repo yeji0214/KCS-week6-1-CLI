@@ -3,7 +3,11 @@ package com.kiosk.order;
 import com.kiosk.menu.Toast;
 
 public class ToastOptionSelector {
-    private final InputHandler inputHandler = new InputHandler();
+    private final InputHandler inputHandler;
+
+    public ToastOptionSelector(InputHandler inputHandler) {
+        this.inputHandler = inputHandler;
+    }
 
     public void selectToastOptions(Toast toast) {
         if (toast.canChooseBread()) {
