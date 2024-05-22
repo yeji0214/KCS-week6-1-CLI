@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import com.kiosk.util.Constants;
 
+// 메뉴 항목 관리 (장바구니, 영수증, 총 가격)
 public class Menu {
     private final List<MenuItem> cart = new ArrayList<>();
     private int totalPrice = 0;

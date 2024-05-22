@@ -6,6 +6,7 @@ import com.kiosk.util.Constants;
 public class InputHandler {
     private final Scanner scanner = new Scanner(System.in);
 
+    // 정수 입력받기
     public int getIntInput(String prompt) {
         while (true) {
             System.out.print(prompt);
@@ -18,6 +19,7 @@ public class InputHandler {
         }
     }
 
+    // 옵션 선택 입력받기
     public boolean getBooleanInput(String prompt) {
         while (true) {
             System.out.print(prompt);
@@ -37,12 +39,13 @@ public class InputHandler {
         }
     }
 
+    // 수량 입력받기
     public int getQuantity() {
         while (true) {
             System.out.print(Constants.QUANTITY_PROMPT);
             if (scanner.hasNextInt()) {
                 int quantity = scanner.nextInt();
-                if (quantity >= 1 && quantity <= 10) {
+                if (quantity >= Constants.MIN_QUANTITY && quantity <= Constants.MAX_QUANTITY) {
                     return quantity;
                 } else {
                     System.out.println(Constants.INPUT_QUANTITY_ERROR);

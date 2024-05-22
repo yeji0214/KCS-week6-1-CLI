@@ -58,4 +58,6 @@ public class Constants {
     public static final int ORANGE_JUICE_EXTRA_COST = 600;
     public static final int FRENCH_BREAD_EXTRA_COST = 500;
     public static final int SCRAMBLED_EGG_EXTRA_COST = 600;
+    public static final int MIN_QUANTITY = 1;
+    public static final int MAX_QUANTITY = 10;
 }
