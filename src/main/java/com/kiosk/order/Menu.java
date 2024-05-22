@@ -30,9 +30,10 @@ public class Menu {
         System.out.println(Constants.BORDER);
         System.out.println(Constants.RECEIPT_TITLE);
         for (MenuItem item : cart) {
-            System.out.println(item.getName() + " - " + item.getPrice() + "원 x " + item.getQuantity() + "개 = " + (item.getPrice() * item.getQuantity()) + "원");
+            System.out.println("\n" + item.getName() + " - " + item.getPrice() + "원 x " + item.getQuantity() + "개 = " + (item.getPrice() * item.getQuantity()) + "원");
         }
-        System.out.println(Constants.TOTAL_AMOUNT + totalPrice + "원");
+        System.out.println("\n" + Constants.TOTAL_AMOUNT + totalPrice + "원");
+        System.out.println(Constants.BORDER + "\n");
     }
 
     // 메뉴 담기 옵션 선택
@@ -42,12 +43,12 @@ public class Menu {
             switch (choice) {
                 case 1: // 담기
                     addItemToCart(name, price, quantity);
-                    System.out.println(name + " " + quantity + Constants.CART_MESSAGE);
+                    System.out.println("\n" + name + " " + quantity + Constants.CART_MESSAGE);
                     order.showMenu();
                     return;
                 case 2: // 주문하기
                     addItemToCart(name, price, quantity);
-                    System.out.println(name + " " + quantity + Constants.CART_MESSAGE);
+                    System.out.println("\n" + name + " " + quantity + Constants.CART_MESSAGE);
                     showReceipt();
                     paymentProcessor.processPayment(getTotalPrice()); // 결제
                     return;

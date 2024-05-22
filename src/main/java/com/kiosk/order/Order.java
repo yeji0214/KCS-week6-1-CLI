@@ -4,20 +4,18 @@ import com.kiosk.util.Constants;
 
 // 전반적 주문 프로세스 관리
 public class Order {
-    private Menu menu;
-    private InputHandler inputHandler;
-    private ToastOrderProcessor toastOrderProcessor;
-    private ToastOptionSelector toastOptionSelector;
-    private SideOrderProcessor sideOrderProcessor;
-    private SideOptionSelector sideOptionSelector;
-    private DrinkOrderProcessor drinkOrderProcessor;
-    private PaymentProcessor paymentProcessor;
-    private MenuDisplayer menuDisplayer;
+    private final Menu menu;
+    private final InputHandler inputHandler;
+    private final ToastOrderProcessor toastOrderProcessor;
+    private final ToastOptionSelector toastOptionSelector;
+    private final SideOrderProcessor sideOrderProcessor;
+    private final DrinkOrderProcessor drinkOrderProcessor;
+    private final PaymentProcessor paymentProcessor;
+    private final MenuDisplayer menuDisplayer;
 
     public Order() {
         inputHandler = new InputHandler();
         toastOptionSelector = new ToastOptionSelector(inputHandler);
-        sideOptionSelector = new SideOptionSelector(inputHandler);
         paymentProcessor = new PaymentProcessor(inputHandler);
         menu = new Menu(inputHandler, paymentProcessor, this);
         menuDisplayer = new MenuDisplayer();

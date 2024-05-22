@@ -5,7 +5,7 @@ import com.kiosk.util.Constants;
 
 // 결제 프로세스 관리
 public class PaymentProcessor {
-    private InputHandler inputHandler;
+    private final InputHandler inputHandler;
 
     public PaymentProcessor(InputHandler inputHandler) {
         this.inputHandler = inputHandler;
@@ -67,6 +67,6 @@ public class PaymentProcessor {
         if (change > 0) {
             System.out.println(Constants.CHANGE_MESSAGE + change + "원");
         }
-        System.out.println(Constants.PAYMENT_COMPLETE);
+        System.out.println("\n" + Constants.PAYMENT_COMPLETE);
     }
 }

@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Prevent select cart option code duplication - Implement handleOrderOptions() in Menu class">
+    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Comment &amp; Organize">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/BaconBestToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/BaconBestToast.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/DrinkOrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/DrinkOrderProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/InputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/InputHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/MenuDisplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/MenuDisplayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/PaymentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/PaymentProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SetOrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SetOrderProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SideOptionSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SideOptionSelector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SideOrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SideOrderProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/ToastOptionSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/ToastOptionSelector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/ToastOrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/ToastOrderProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/util/Constants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716381274352</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Comment &amp; Organize">
+      <option name="closed" value="true" />
+      <created>1716389135513</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1716389135513</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -333,6 +340,7 @@
     <MESSAGE value="Select payment method - use inputHandler" />
     <MESSAGE value="Prevent menu creation duplication in SetOrderProcessor - Import menus from MenuDislayer.java" />
     <MESSAGE value="Prevent select cart option code duplication - Implement handleOrderOptions() in Menu class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prevent select cart option code duplication - Implement handleOrderOptions() in Menu class" />
+    <MESSAGE value="Comment &amp; Organize" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comment &amp; Organize" />
   </component>
 </project>

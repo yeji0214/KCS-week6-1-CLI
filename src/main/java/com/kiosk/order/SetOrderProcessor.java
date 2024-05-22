@@ -82,7 +82,7 @@ public class SetOrderProcessor {
         quantity = inputHandler.getQuantity(); // 수량
         totalPrice = finalToastPrice * quantity; // 최종 가격
 
-        System.out.println(toastSetName + " - " + finalToastPrice + "원 x " + quantity + "개 = " + (totalPrice) + "원");
+        System.out.println("\n" + toastSetName + " - " + finalToastPrice + "원 x " + quantity + "개 = " + (totalPrice) + "원");
         System.out.println(Constants.CART_ACTIONS_PROMPT);
 
         menu.handleOrderOptions(toastSetName, finalToastPrice, quantity);

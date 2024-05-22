@@ -5,8 +5,8 @@ import com.kiosk.util.Constants;
 
 // 음료 주문 프로세스 관리
 public class DrinkOrderProcessor {
-    private InputHandler inputHandler;
-    private Menu menu;
+    private final InputHandler inputHandler;
+    private final Menu menu;
 
     public DrinkOrderProcessor(InputHandler inputHandler, Menu menu) {
         this.inputHandler = inputHandler;
@@ -23,7 +23,7 @@ public class DrinkOrderProcessor {
             int choice = inputHandler.getIntInput(Constants.DRINK_PROMPT);
             if (choice >= 1 && choice <= drinkMenu.length) {
                 Drink selectedDrink = drinkMenu[choice - 1];
-                System.out.println("\n" + selectedDrink.getName() + Constants.DRINK_SELECT_MESSAGE);
+                System.out.println("\n" + selectedDrink.getName() + Constants.DRINK_SELECT_MESSAGE + "\n");
                 processOrder(selectedDrink);
                 return;
             } else {
@@ -34,7 +34,7 @@ public class DrinkOrderProcessor {
 
     private void processOrder(Drink drink) {
         int quantity = inputHandler.getQuantity();
-        System.out.println(drink.getName() + " - " + drink.getPrice() + "원 x " + quantity + "개 = " + (drink.getPrice() * quantity) + "원");
+        System.out.println("\n" + drink.getName() + " - " + drink.getPrice() + "원 x " + quantity + "개 = " + (drink.getPrice() * quantity) + "원");
         System.out.println(Constants.CART_ACTIONS_PROMPT);
 
         menu.handleOrderOptions(drink.getName(), drink.getPrice(), quantity);

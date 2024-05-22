@@ -5,10 +5,10 @@ import com.kiosk.util.Constants;
 
 // 토스트 주문 프로세스 관리
 public class ToastOrderProcessor {
-    private InputHandler inputHandler;
-    private Menu menu;
-    private ToastOptionSelector toastOptionSelector;
-    private SetOrderProcessor setOrderProcessor;
+    private final InputHandler inputHandler;
+    private final Menu menu;
+    private final ToastOptionSelector toastOptionSelector;
+    private final SetOrderProcessor setOrderProcessor;
 
     public ToastOrderProcessor(InputHandler inputHandler, Menu menu, ToastOptionSelector toastOptionSelector, MenuDisplayer menuDisplayer) {
         this.inputHandler = inputHandler;
@@ -27,7 +27,7 @@ public class ToastOrderProcessor {
             int choice = inputHandler.getIntInput(Constants.TOAST_PROMPT);
             if (choice >= 1 && choice <= toastMenu.length) {
                 Toast selectedToast = toastMenu[choice - 1];
-                System.out.println("\n" + selectedToast.getName() + Constants.TOAST_SELECT_MESSAGE);
+                System.out.println("\n" + selectedToast.getName() + Constants.TOAST_SELECT_MESSAGE + "\n");
                 selectToastOption(selectedToast);
                 return;
             } else {
@@ -43,7 +43,7 @@ public class ToastOrderProcessor {
 
         int totalPrice = finalPrice * quantity;
 
-        System.out.println(toast.getName() + " - " + finalPrice + "원 x " + quantity + "개 = " + (totalPrice) + "원");
+        System.out.println("\n" + toast.getName() + " - " + finalPrice + "원 x " + quantity + "개 = " + (totalPrice) + "원");
         System.out.println(Constants.CART_ACTIONS_PROMPT);
 
         menu.handleOrderOptions(toast.getName(), finalPrice, quantity);
@@ -60,7 +60,7 @@ public class ToastOrderProcessor {
                 processOrder(toast);
                 return;
             } else if (choice == 2) { // 세트
-                System.out.println("\n" + toast.getName() + Constants.SET_SELECT_MESSAGE);
+                System.out.println("\n" + toast.getName() + Constants.SET_SELECT_MESSAGE + "\n");
                 setOrderProcessor.processSetOrder(toast);
                 return;
             } else {
