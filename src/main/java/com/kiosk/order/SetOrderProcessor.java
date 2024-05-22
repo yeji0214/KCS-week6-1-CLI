@@ -12,13 +12,15 @@ public class SetOrderProcessor {
     private final InputHandler inputHandler;
     private final ToastOptionSelector toastOptionSelector;
     private final SideOptionSelector sideOptionSelector;
+    private final PaymentProcessor paymentProcessor;
     private final Order order;
 
-    public SetOrderProcessor(Menu menu, InputHandler inputHandler, ToastOptionSelector toastOptionSelector, SideOptionSelector sideOptionSelector, Order order) {
+    public SetOrderProcessor(Menu menu, InputHandler inputHandler, ToastOptionSelector toastOptionSelector, SideOptionSelector sideOptionSelector, PaymentProcessor paymentProcessor, Order order) {
         this.menu = menu;
         this.inputHandler = inputHandler;
         this.toastOptionSelector = toastOptionSelector;
         this.sideOptionSelector = sideOptionSelector;
+        this.paymentProcessor = paymentProcessor;
         this.order = order;
     }
 
@@ -102,7 +104,8 @@ public class SetOrderProcessor {
                     menu.addItemToCart(toastSetName, finalToastPrice, quantity);
                     System.out.println(toastSetName + " " + quantity + Constants.CART_MESSAGE);
                     menu.showReceipt();
-                    new PaymentProcessor(menu).processPayment(menu.getTotalPrice());
+//                    new PaymentProcessor(menu, inputHandler).processPayment(menu.getTotalPrice());
+                    paymentProcessor.processPayment(menu.getTotalPrice());
                     return;
                 case 3:
                     order.showMenu();

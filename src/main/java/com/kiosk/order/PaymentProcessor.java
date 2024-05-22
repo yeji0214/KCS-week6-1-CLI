@@ -3,44 +3,41 @@ package com.kiosk.order;
 import java.util.Scanner;
 import com.kiosk.util.Constants;
 
+// 결제 프로세스 관리
 public class PaymentProcessor {
-    private final Menu menu;
+    private Menu menu;
+    private InputHandler inputHandler;
 
-    public PaymentProcessor(Menu menu) {
+    public PaymentProcessor(Menu menu, InputHandler inputHandler) {
         this.menu = menu;
+        this.inputHandler = inputHandler;
     }
 
     public void processPayment(int totalPrice) {
+        int paymentChoice = 0; // 결제 방식 (0: 나눠서 결제 1: 한번에 결제)
+        int amountPaid = 0; // 지불한 금액
+
         Scanner scanner = new Scanner(System.in);
         System.out.println(Constants.PAYMENT_PROMPT);
         System.out.println(Constants.PAYMENT_OPTION1);
         System.out.println(Constants.PAYMENT_OPTION2);
 
-        int paymentChoice = 0;
-        while (true) {
-            System.out.print(Constants.SELECT_PROMPT);
-            if (scanner.hasNextInt()) {
-                paymentChoice = scanner.nextInt();
-                if (paymentChoice == 1 || paymentChoice == 2) {
-                    break;
-                } else {
-                    System.out.println(Constants.INPUT_ERROR);
-                }
-            } else {
-                System.out.println(Constants.INPUT_ERROR);
-                scanner.next();
-            }
+        // 결제 방식 입력받기
+        boolean paymentMethod = inputHandler.getBooleanInput(Constants.SELECT_PROMPT);
+
+        if (!paymentMethod) {
+            paymentChoice = 1;
         }
 
-        int amountPaid = 0;
         switch (paymentChoice) {
-            case 1:
+            case 0: // 나눠서 결제
                 while (amountPaid < totalPrice) {
                     System.out.print(Constants.ENTER_AMOUNT_PROMPT);
                     if (scanner.hasNextInt()) {
-                        amountPaid = scanner.nextInt();
+                        int partialPayment = scanner.nextInt();
+                        amountPaid += partialPayment;
                         if (amountPaid < totalPrice) {
-                            System.out.println(Constants.PAYMENT_ERROR);
+                            System.out.println(Constants.REMAINING_AMOUNT + (totalPrice - amountPaid) + "원");
                         } else {
                             break;
                         }
@@ -50,14 +47,13 @@ public class PaymentProcessor {
                     }
                 }
                 break;
-            case 2:
+            case 1: // 한번에 결제
                 while (amountPaid < totalPrice) {
                     System.out.print(Constants.ENTER_AMOUNT_PROMPT);
                     if (scanner.hasNextInt()) {
-                        int partialPayment = scanner.nextInt();
-                        amountPaid += partialPayment;
+                        amountPaid = scanner.nextInt();
                         if (amountPaid < totalPrice) {
-                            System.out.println(Constants.REMAINING_AMOUNT + (totalPrice - amountPaid) + "원");
+                            System.out.println(Constants.PAYMENT_ERROR);
                         } else {
                             break;
                         }

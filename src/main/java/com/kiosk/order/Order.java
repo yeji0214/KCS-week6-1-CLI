@@ -18,7 +18,7 @@ public class Order {
         inputHandler = new InputHandler();
         toastOptionSelector = new ToastOptionSelector(inputHandler);
         sideOptionSelector = new SideOptionSelector(inputHandler);
-        paymentProcessor = new PaymentProcessor(menu);
+        paymentProcessor = new PaymentProcessor(menu, inputHandler);
         toastOrderProcessor = new ToastOrderProcessor(inputHandler, menu, toastOptionSelector, paymentProcessor, this);
         sideOrderProcessor = new SideOrderProcessor(inputHandler, menu, sideOptionSelector, paymentProcessor, this);
         drinkOrderProcessor = new DrinkOrderProcessor(inputHandler, menu, paymentProcessor, this);

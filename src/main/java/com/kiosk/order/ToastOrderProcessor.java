@@ -82,7 +82,7 @@ public class ToastOrderProcessor {
                 return;
             } else if (choice == 2) {
                 System.out.println("\n" + toast.getName() + Constants.SET_SELECT_MESSAGE);
-                new SetOrderProcessor(menu, inputHandler, toastOptionSelector, sideOptionSelector, order).processSetOrder(toast);
+                new SetOrderProcessor(menu, inputHandler, toastOptionSelector, sideOptionSelector, paymentProcessor, order).processSetOrder(toast);
                 return;
             } else {
                 System.out.println(Constants.INPUT_ERROR);
