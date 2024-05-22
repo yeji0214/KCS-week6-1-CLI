@@ -3,19 +3,14 @@ package com.kiosk.order;
 import com.kiosk.menu.Side;
 import com.kiosk.util.Constants;
 
+// 사이드 주문 프로세스 관리
 public class SideOrderProcessor {
     private InputHandler inputHandler;
     private Menu menu;
-    private SideOptionSelector sideOptionSelector;
-    private PaymentProcessor paymentProcessor;
-    private Order order;
 
-    public SideOrderProcessor(InputHandler inputHandler, Menu menu, SideOptionSelector sideOptionSelector, PaymentProcessor paymentProcessor, Order order) {
+    public SideOrderProcessor(InputHandler inputHandler, Menu menu) {
         this.inputHandler = inputHandler;
         this.menu = menu;
-        this.sideOptionSelector = sideOptionSelector;
-        this.paymentProcessor = paymentProcessor;
-        this.order = order;
     }
 
     public void processSideOrder() {
@@ -23,6 +18,7 @@ public class SideOrderProcessor {
         menuDisplayer.showSideMenu();
         Side[] sideMenu = menuDisplayer.getSides();
 
+        // 사이드 선택
         while (true) {
             int choice = inputHandler.getIntInput(Constants.SIDE_PROMPT);
             if (choice >= 1 && choice <= sideMenu.length) {

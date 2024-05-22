@@ -21,9 +21,9 @@ public class Order {
         paymentProcessor = new PaymentProcessor(inputHandler);
         menu = new Menu(inputHandler, paymentProcessor, this);
         menuDisplayer = new MenuDisplayer();
-        toastOrderProcessor = new ToastOrderProcessor(inputHandler, menu, toastOptionSelector, paymentProcessor, menuDisplayer, this);
-        sideOrderProcessor = new SideOrderProcessor(inputHandler, menu, sideOptionSelector, paymentProcessor, this);
-        drinkOrderProcessor = new DrinkOrderProcessor(inputHandler, menu, paymentProcessor, this);
+        toastOrderProcessor = new ToastOrderProcessor(inputHandler, menu, toastOptionSelector, menuDisplayer);
+        sideOrderProcessor = new SideOrderProcessor(inputHandler, menu);
+        drinkOrderProcessor = new DrinkOrderProcessor(inputHandler, menu);
     }
 
     public void start() {

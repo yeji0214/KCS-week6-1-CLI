@@ -3,7 +3,6 @@ package com.kiosk.order;
 import com.kiosk.menu.Drink;
 import com.kiosk.menu.Side;
 import com.kiosk.menu.Toast;
-import com.kiosk.menu.drink.*;
 import com.kiosk.menu.side.PotatoPop;
 import com.kiosk.util.Constants;
 
@@ -12,21 +11,15 @@ public class SetOrderProcessor {
     private final Menu menu;
     private final InputHandler inputHandler;
     private final ToastOptionSelector toastOptionSelector;
-    private final SideOptionSelector sideOptionSelector;
-    private final PaymentProcessor paymentProcessor;
     private final Side[] sides;
     private final Drink[] drinks;
-    private final Order order;
 
-    public SetOrderProcessor(Menu menu, InputHandler inputHandler, ToastOptionSelector toastOptionSelector, SideOptionSelector sideOptionSelector, PaymentProcessor paymentProcessor, Side[] sides, Drink[] drinks, Order order) {
+    public SetOrderProcessor(Menu menu, InputHandler inputHandler, ToastOptionSelector toastOptionSelector, Side[] sides, Drink[] drinks) {
         this.menu = menu;
         this.inputHandler = inputHandler;
         this.toastOptionSelector = toastOptionSelector;
-        this.sideOptionSelector = sideOptionSelector;
-        this.paymentProcessor = paymentProcessor;
         this.sides = sides;
         this.drinks = drinks;
-        this.order = order;
     }
 
     public void processSetOrder(Toast toast) {

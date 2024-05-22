@@ -3,6 +3,7 @@ package com.kiosk.order;
 import java.util.Scanner;
 import com.kiosk.util.Constants;
 
+// 사용자 입력 받기
 public class InputHandler {
     private final Scanner scanner = new Scanner(System.in);
 

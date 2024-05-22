@@ -3,17 +3,14 @@ package com.kiosk.order;
 import com.kiosk.menu.Drink;
 import com.kiosk.util.Constants;
 
+// 음료 주문 프로세스 관리
 public class DrinkOrderProcessor {
     private InputHandler inputHandler;
     private Menu menu;
-    private PaymentProcessor paymentProcessor;
-    private Order order;
 
-    public DrinkOrderProcessor(InputHandler inputHandler, Menu menu, PaymentProcessor paymentProcessor, Order order) {
+    public DrinkOrderProcessor(InputHandler inputHandler, Menu menu) {
         this.inputHandler = inputHandler;
         this.menu = menu;
-        this.paymentProcessor = paymentProcessor;
-        this.order = order;
     }
 
     public void processDrinkOrder() {
@@ -21,6 +18,7 @@ public class DrinkOrderProcessor {
         menuDisplayer.showDrinkMenu();
         Drink[] drinkMenu = menuDisplayer.getDrinks();
 
+        // 음료 선택
         while (true) {
             int choice = inputHandler.getIntInput(Constants.DRINK_PROMPT);
             if (choice >= 1 && choice <= drinkMenu.length) {
@@ -39,26 +37,6 @@ public class DrinkOrderProcessor {
         System.out.println(drink.getName() + " - " + drink.getPrice() + "원 x " + quantity + "개 = " + (drink.getPrice() * quantity) + "원");
         System.out.println(Constants.CART_ACTIONS_PROMPT);
 
-        while (true) {
-            int choice = inputHandler.getIntInput(Constants.SELECT_PROMPT);
-            switch (choice) {
-                case 1:
-                    menu.addItemToCart(drink.getName(), drink.getPrice(), quantity);
-                    System.out.println(drink.getName() + " " + quantity + Constants.CART_MESSAGE);
-                    order.showMenu();
-                    return;
-                case 2:
-                    menu.addItemToCart(drink.getName(), drink.getPrice(), quantity);
-                    System.out.println(drink.getName() + " " + quantity + Constants.CART_MESSAGE);
-                    menu.showReceipt();
-                    paymentProcessor.processPayment(menu.getTotalPrice());
-                    return;
-                case 3:
-                    order.showMenu();
-                    return;
-                default:
-                    System.out.println(Constants.INPUT_ERROR);
-            }
-        }
+        menu.handleOrderOptions(drink.getName(), drink.getPrice(), quantity);
     }
 }

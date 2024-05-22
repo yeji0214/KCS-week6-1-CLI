@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Prevent menu creation duplication in SetOrderProcessor - Import menus from MenuDislayer.java">
+    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Prevent select cart option code duplication - Implement handleOrderOptions() in Menu class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/DrinkOrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/DrinkOrderProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/InputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/InputHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/MenuDisplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/MenuDisplayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/PaymentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/PaymentProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SetOrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SetOrderProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SideOptionSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SideOptionSelector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SideOrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SideOrderProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/ToastOptionSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/ToastOptionSelector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/ToastOrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/ToastOrderProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -285,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716379776977</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Prevent select cart option code duplication - Implement handleOrderOptions() in Menu class">
+      <option name="closed" value="true" />
+      <created>1716381274352</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1716381274352</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -320,6 +332,7 @@
     <MESSAGE value="Comment &amp; Remove duplicate code (create printMenu())" />
     <MESSAGE value="Select payment method - use inputHandler" />
     <MESSAGE value="Prevent menu creation duplication in SetOrderProcessor - Import menus from MenuDislayer.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prevent menu creation duplication in SetOrderProcessor - Import menus from MenuDislayer.java" />
+    <MESSAGE value="Prevent select cart option code duplication - Implement handleOrderOptions() in Menu class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prevent select cart option code duplication - Implement handleOrderOptions() in Menu class" />
   </component>
 </project>

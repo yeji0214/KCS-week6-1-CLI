@@ -19,11 +19,13 @@ public class Menu {
         this.order = order;
     }
 
+    // 장바구니에 담기
     public void addItemToCart(String name, int price, int quantity) {
         cart.add(new MenuItem(name, price, quantity));
         totalPrice += price * quantity;
     }
 
+    // 영수증 보여주기
     public void showReceipt() {
         System.out.println(Constants.BORDER);
         System.out.println(Constants.RECEIPT_TITLE);
@@ -33,22 +35,23 @@ public class Menu {
         System.out.println(Constants.TOTAL_AMOUNT + totalPrice + "원");
     }
 
+    // 메뉴 담기 옵션 선택
     public void handleOrderOptions(String name, int price, int quantity) {
         while (true) {
             int choice = inputHandler.getIntInput(Constants.SELECT_PROMPT);
             switch (choice) {
-                case 1:
+                case 1: // 담기
                     addItemToCart(name, price, quantity);
                     System.out.println(name + " " + quantity + Constants.CART_MESSAGE);
                     order.showMenu();
                     return;
-                case 2:
+                case 2: // 주문하기
                     addItemToCart(name, price, quantity);
                     System.out.println(name + " " + quantity + Constants.CART_MESSAGE);
                     showReceipt();
-                    paymentProcessor.processPayment(getTotalPrice());
+                    paymentProcessor.processPayment(getTotalPrice()); // 결제
                     return;
-                case 3:
+                case 3: // 취소
                     order.showMenu();
                     return;
                 default:
@@ -57,6 +60,7 @@ public class Menu {
         }
     }
 
+    // 총 금액 반환
     public int getTotalPrice() {
         return totalPrice;
     }
