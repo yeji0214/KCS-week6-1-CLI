@@ -92,26 +92,6 @@ public class SetOrderProcessor {
         System.out.println(toastSetName + " - " + finalToastPrice + "원 x " + quantity + "개 = " + (totalPrice) + "원");
         System.out.println(Constants.CART_ACTIONS_PROMPT);
 
-        while (true) {
-            int choice = inputHandler.getIntInput(Constants.SELECT_PROMPT);
-            switch (choice) {
-                case 1:
-                    menu.addItemToCart(toastSetName, finalToastPrice, quantity);
-                    System.out.println(toastSetName + " " + quantity + Constants.CART_MESSAGE);
-                    order.showMenu();
-                    return;
-                case 2:
-                    menu.addItemToCart(toastSetName, finalToastPrice, quantity);
-                    System.out.println(toastSetName + " " + quantity + Constants.CART_MESSAGE);
-                    menu.showReceipt();
-                    paymentProcessor.processPayment(menu.getTotalPrice());
-                    return;
-                case 3:
-                    order.showMenu();
-                    return;
-                default:
-                    System.out.println(Constants.INPUT_ERROR);
-            }
-        }
+        menu.handleOrderOptions(toastSetName, finalToastPrice, quantity);
     }
 }

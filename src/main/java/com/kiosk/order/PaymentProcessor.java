@@ -5,11 +5,9 @@ import com.kiosk.util.Constants;
 
 // 결제 프로세스 관리
 public class PaymentProcessor {
-    private Menu menu;
     private InputHandler inputHandler;
 
-    public PaymentProcessor(Menu menu, InputHandler inputHandler) {
-        this.menu = menu;
+    public PaymentProcessor(InputHandler inputHandler) {
         this.inputHandler = inputHandler;
     }
 

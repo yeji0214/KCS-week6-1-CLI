@@ -15,11 +15,11 @@ public class Order {
     private MenuDisplayer menuDisplayer;
 
     public Order() {
-        menu = new Menu();
         inputHandler = new InputHandler();
         toastOptionSelector = new ToastOptionSelector(inputHandler);
         sideOptionSelector = new SideOptionSelector(inputHandler);
-        paymentProcessor = new PaymentProcessor(menu, inputHandler);
+        paymentProcessor = new PaymentProcessor(inputHandler);
+        menu = new Menu(inputHandler, paymentProcessor, this);
         menuDisplayer = new MenuDisplayer();
         toastOrderProcessor = new ToastOrderProcessor(inputHandler, menu, toastOptionSelector, paymentProcessor, menuDisplayer, this);
         sideOrderProcessor = new SideOrderProcessor(inputHandler, menu, sideOptionSelector, paymentProcessor, this);
