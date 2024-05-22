@@ -12,6 +12,7 @@ public class Order {
     private SideOptionSelector sideOptionSelector;
     private DrinkOrderProcessor drinkOrderProcessor;
     private PaymentProcessor paymentProcessor;
+    private MenuDisplayer menuDisplayer;
 
     public Order() {
         menu = new Menu();
@@ -19,7 +20,8 @@ public class Order {
         toastOptionSelector = new ToastOptionSelector(inputHandler);
         sideOptionSelector = new SideOptionSelector(inputHandler);
         paymentProcessor = new PaymentProcessor(menu, inputHandler);
-        toastOrderProcessor = new ToastOrderProcessor(inputHandler, menu, toastOptionSelector, paymentProcessor, this);
+        menuDisplayer = new MenuDisplayer();
+        toastOrderProcessor = new ToastOrderProcessor(inputHandler, menu, toastOptionSelector, paymentProcessor, menuDisplayer, this);
         sideOrderProcessor = new SideOrderProcessor(inputHandler, menu, sideOptionSelector, paymentProcessor, this);
         drinkOrderProcessor = new DrinkOrderProcessor(inputHandler, menu, paymentProcessor, this);
     }
@@ -59,7 +61,6 @@ public class Order {
     }
 
     public void showMenu() {
-        MenuDisplayer menuDisplayer = new MenuDisplayer();
         menuDisplayer.showMainMenu(); // 메뉴 카테고리 보여주기
         while (true) {
             int choice = inputHandler.getIntInput(Constants.MENU_PROMPT);

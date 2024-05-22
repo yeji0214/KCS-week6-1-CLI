@@ -9,15 +9,19 @@ public class ToastOrderProcessor {
     private ToastOptionSelector toastOptionSelector;
     private SideOptionSelector sideOptionSelector;
     private PaymentProcessor paymentProcessor;
+    private MenuDisplayer menuDisplayer;
     private Order order;
+    private SetOrderProcessor setOrderProcessor;
 
-    public ToastOrderProcessor(InputHandler inputHandler, Menu menu, ToastOptionSelector toastOptionSelector, PaymentProcessor paymentProcessor, Order order) {
+    public ToastOrderProcessor(InputHandler inputHandler, Menu menu, ToastOptionSelector toastOptionSelector, PaymentProcessor paymentProcessor, MenuDisplayer menuDisplayer, Order order) {
         this.inputHandler = inputHandler;
         this.menu = menu;
         this.toastOptionSelector = toastOptionSelector;
         this.sideOptionSelector = sideOptionSelector;
         this.paymentProcessor = paymentProcessor;
+        this.menuDisplayer = menuDisplayer;
         this.order = order;
+        this.setOrderProcessor = new SetOrderProcessor(menu, inputHandler, toastOptionSelector, sideOptionSelector, paymentProcessor, menuDisplayer.getSides(), menuDisplayer.getDrinks(), order);
     }
 
     public void processToastOrder() {
@@ -82,7 +86,7 @@ public class ToastOrderProcessor {
                 return;
             } else if (choice == 2) {
                 System.out.println("\n" + toast.getName() + Constants.SET_SELECT_MESSAGE);
-                new SetOrderProcessor(menu, inputHandler, toastOptionSelector, sideOptionSelector, paymentProcessor, order).processSetOrder(toast);
+                setOrderProcessor.processSetOrder(toast);
                 return;
             } else {
                 System.out.println(Constants.INPUT_ERROR);
