@@ -26,7 +26,10 @@ public class ToastOrderProcessor {
         // 토스트 선택
         while (true) {
             int choice = inputHandler.getIntInput(Constants.TOAST_PROMPT);
-            if (choice >= 1 && choice <= toastMenu.length) {
+            if (choice == 0) {
+                menuDisplayer.showToastIngredients();
+            }
+            else if (choice >= 1 && choice <= toastMenu.length) {
                 Toast selectedToast = toastMenu[choice - 1];
                 System.out.println("\n" + selectedToast.getName() + Constants.TOAST_SELECT_MESSAGE + "\n");
                 selectToastOption(selectedToast);
