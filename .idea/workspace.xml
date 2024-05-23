@@ -4,47 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Design modification">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/side/Side.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/Drink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/Side.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/Toast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/Toast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/AmericanoHot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/AmericanoIce.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/Cola.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/ColaZero.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/IcedTea.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/OrangeJuice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/Sprite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/drink/SpriteZero.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/side/PotatoPop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/BaconBestToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/BaconPotatoPizzaToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/BulgogiSpecialToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/ChickenSpecialToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/ChiliShrimpToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/CornCheeseToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/DeepCheeseBaconPotatoToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/DeepCheeseBaconToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/DoubleCheeseBulgogiToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/FrenchHamCheeseToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/GrilledBulgalbiToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/GrilledBulgogiToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/HamCheesePotatoToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/HamCheeseToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/HamSpecialToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/HoneyGarlicHamCheeseToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/HotBaconChickenToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/PotatoSpecialToast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/menu/toast/ShrimpToast.java" beforeDir="false" />
+    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Changing the way menu objects are created">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/DrinkOrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/DrinkOrderProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/MenuDisplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/MenuDisplayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SetOrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SetOrderProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SideOptionSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SideOptionSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SideOrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/SideOrderProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/ToastOptionSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/ToastOptionSelector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/order/ToastOrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/order/ToastOrderProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kiosk/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kiosk/util/Constants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716392798676</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Changing the way menu objects are created">
+      <option name="closed" value="true" />
+      <created>1716452638778</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1716452638779</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -380,6 +353,7 @@
     <MESSAGE value="Prevent select cart option code duplication - Implement handleOrderOptions() in Menu class" />
     <MESSAGE value="Comment &amp; Organize" />
     <MESSAGE value="Design modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="Design modification" />
+    <MESSAGE value="Changing the way menu objects are created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing the way menu objects are created" />
   </component>
 </project>

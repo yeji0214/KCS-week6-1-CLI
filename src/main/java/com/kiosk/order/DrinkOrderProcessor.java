@@ -21,9 +21,13 @@ public class DrinkOrderProcessor {
         // 음료 선택
         while (true) {
             int choice = inputHandler.getIntInput(Constants.DRINK_PROMPT);
-            if (choice >= 1 && choice <= drinkMenu.length) {
+            if (choice == 0) {
+                // 카페인 함량 표 보여주기
+                menuDisplayer.showDrinkCaffeine();
+            }
+            else if (choice >= 1 && choice <= drinkMenu.length) {
                 Drink selectedDrink = drinkMenu[choice - 1];
-                System.out.println("\n" + selectedDrink.getName() + Constants.DRINK_SELECT_MESSAGE + "\n");
+                System.out.println("\n" + selectedDrink.getName() + Constants.DRINK_SELECT_MESSAGE);
                 processOrder(selectedDrink);
                 return;
             } else {

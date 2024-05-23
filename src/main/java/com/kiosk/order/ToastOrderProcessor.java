@@ -9,16 +9,17 @@ public class ToastOrderProcessor {
     private final Menu menu;
     private final ToastOptionSelector toastOptionSelector;
     private final SetOrderProcessor setOrderProcessor;
+    private final MenuDisplayer menuDisplayer;
 
     public ToastOrderProcessor(InputHandler inputHandler, Menu menu, ToastOptionSelector toastOptionSelector, MenuDisplayer menuDisplayer) {
         this.inputHandler = inputHandler;
         this.menu = menu;
         this.toastOptionSelector = toastOptionSelector;
-        this.setOrderProcessor = new SetOrderProcessor(menu, inputHandler, toastOptionSelector, menuDisplayer.getSides(), menuDisplayer.getDrinks());
+        this.menuDisplayer = menuDisplayer;
+        this.setOrderProcessor = new SetOrderProcessor(menu, inputHandler, toastOptionSelector, menuDisplayer, menuDisplayer.getSides(), menuDisplayer.getDrinks());
     }
 
     public void processToastOrder() {
-        MenuDisplayer menuDisplayer = new MenuDisplayer();
         menuDisplayer.showToastMenu();
         Toast[] toastMenu = menuDisplayer.getToasts();
 

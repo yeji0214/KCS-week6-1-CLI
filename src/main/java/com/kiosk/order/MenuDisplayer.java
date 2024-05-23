@@ -8,6 +8,7 @@ import com.kiosk.menu.drink.*;
 import com.kiosk.util.Constants;
 
 import java.util.Dictionary;
+import java.util.Objects;
 
 // 메뉴 출력
 public class MenuDisplayer {
@@ -44,14 +45,14 @@ public class MenuDisplayer {
         };
 
         drinks = new Drink[]{
-                new Drink("아메리카노 hot", 2900, 800),
-                new Drink("아메리카노 ice", 2900, 800),
-                new Drink("아이스티", 2900, 800),
-                new Drink("콜라", 2000, 0),
-                new Drink("콜라 제로", 2000, 0),
-                new Drink("사이다", 2000, 0),
-                new Drink("사이다 제로", 2000, 0),
-                new Drink("오렌지 주스", 2600, 600)
+                new CaffeineDrink("아메리카노 hot", 2900, 800, 150),
+                new CaffeineDrink("아메리카노 ice", 2900, 800, 150),
+                new NonCaffeineDrink("아이스티", 2900, 800),
+                new CaffeineDrink("콜라", 2000, 0, 35),
+                new CaffeineDrink("콜라 제로", 2000, 0, 34),
+                new NonCaffeineDrink("사이다", 2000, 0),
+                new NonCaffeineDrink("사이다 제로", 2000, 0),
+                new NonCaffeineDrink("오렌지 주스", 2600, 600)
         };
     }
 
@@ -86,6 +87,23 @@ public class MenuDisplayer {
         printMenu(Constants.DRINK_MENU_TITLE, drinks);
     }
 
+    // 음료 카페인 함량 보여주기
+    public void showDrinkCaffeine() {
+        System.out.println(Constants.BORDER);
+        System.out.println(Constants.DRINK_CAFFEINE_CONTENT_TITLE);
+        System.out.println();
+        for (int i = 0; i < drinks.length; i++) {
+            if (drinks[i] instanceof CaffeineDrink) {
+                System.out.println((i + 1) + ". " + drinks[i].getName() + " - " + ((CaffeineDrink) drinks[i]).getCaffeineContent() + "mg");
+            }
+            else {
+                System.out.println((i + 1) + ". " + drinks[i].getName() + " - 0mg");
+            }
+        }
+
+        System.out.println();
+    }
+
     // 메뉴판 출력
     private void printMenu(String title, MenuItem[] menu) {
         System.out.println(Constants.BORDER);
@@ -93,6 +111,9 @@ public class MenuDisplayer {
         System.out.println();
         for (int i = 0; i < menu.length; i++) {
             System.out.println((i + 1) + ". " + menu[i].getName() + " - " + menu[i].getPrice() + "원");
+        }
+        if (Objects.equals(title, Constants.DRINK_MENU_TITLE)) {
+            System.out.println(Constants.VIEW_CAFFEINE_CONTENT_OPTION);
         }
         System.out.println();
     }

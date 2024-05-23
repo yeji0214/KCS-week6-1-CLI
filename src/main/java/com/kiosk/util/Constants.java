@@ -53,6 +53,8 @@ public class Constants {
     public static final String FRENCH_BREAD_SUFFIX = " (프렌치빵)";
     public static final String EGG_OPTION_PROMPT = "🍳 계란을 선택하세요 (1. 기본, 2. 스크램블(+600원)): ";
     public static final String SCRAMBLED_EGG_SUFFIX = " (스크램블)";
+    public static final String VIEW_CAFFEINE_CONTENT_OPTION = "0. 각 메뉴의 카페인 함량 보기";
+    public static final String DRINK_CAFFEINE_CONTENT_TITLE = "<Drink 카페인 함량>";
     public static final int SET_PRICE = 2700;
     public static final int AMERICANO_ICED_TEA_EXTRA_COST = 800;
     public static final int ORANGE_JUICE_EXTRA_COST = 600;

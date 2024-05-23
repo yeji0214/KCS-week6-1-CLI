@@ -10,13 +10,15 @@ public class SetOrderProcessor {
     private final Menu menu;
     private final InputHandler inputHandler;
     private final ToastOptionSelector toastOptionSelector;
+    private final MenuDisplayer menuDisplayer;
     private final Side[] sides;
     private final Drink[] drinks;
 
-    public SetOrderProcessor(Menu menu, InputHandler inputHandler, ToastOptionSelector toastOptionSelector, Side[] sides, Drink[] drinks) {
+    public SetOrderProcessor(Menu menu, InputHandler inputHandler, ToastOptionSelector toastOptionSelector, MenuDisplayer menuDisplayer, Side[] sides, Drink[] drinks) {
         this.menu = menu;
         this.inputHandler = inputHandler;
         this.toastOptionSelector = toastOptionSelector;
+        this.menuDisplayer = menuDisplayer;
         this.sides = sides;
         this.drinks = drinks;
     }
@@ -60,11 +62,16 @@ public class SetOrderProcessor {
         for (int i = 0; i < drinks.length; i++) {
             System.out.println((i + 1) + ". " + drinks[i].getName() + " (+" + drinks[i].getSetPrice() + "원)");
         }
+        System.out.println(Constants.VIEW_CAFFEINE_CONTENT_OPTION + "\n");
 
         // 음료 선택 & 추가 금액 적용
         while (true) {
             int choice = inputHandler.getIntInput(Constants.SELECT_PROMPT);
-            if (choice >= 1 && choice <= drinks.length) {
+            if (choice == 0) {
+                // 카페인 함량 표 보여주기
+                menuDisplayer.showDrinkCaffeine();
+            }
+            else if (choice >= 1 && choice <= drinks.length) {
                 drink = drinks[choice - 1];
                 if (drink.getName().contains(Constants.AMERICANO) || drink.getName().contains(Constants.ICEDTEA)) {
                     finalToastPrice += Constants.AMERICANO_ICED_TEA_EXTRA_COST;
