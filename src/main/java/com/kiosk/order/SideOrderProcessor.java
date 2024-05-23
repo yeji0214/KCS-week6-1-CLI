@@ -1,6 +1,6 @@
 package com.kiosk.order;
 
-import com.kiosk.menu.Side;
+import com.kiosk.menu.side.Side;
 import com.kiosk.util.Constants;
 
 // 사이드 주문 프로세스 관리

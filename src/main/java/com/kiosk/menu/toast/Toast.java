@@ -1,6 +1,8 @@
-package com.kiosk.menu;
+package com.kiosk.menu.toast;
 
-public abstract class Toast extends MenuItem {
+import com.kiosk.menu.MenuItem;
+
+public class Toast extends MenuItem {
     private boolean canChooseBread;
     private boolean canChooseEgg;
 

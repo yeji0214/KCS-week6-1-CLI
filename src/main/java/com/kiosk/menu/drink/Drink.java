@@ -1,6 +1,8 @@
-package com.kiosk.menu;
+package com.kiosk.menu.drink;
 
-public abstract class Drink extends MenuItem {
+import com.kiosk.menu.MenuItem;
+
+public class Drink extends MenuItem {
     private int setPrice;
 
     public Drink(String name, int price, int setPrice) {

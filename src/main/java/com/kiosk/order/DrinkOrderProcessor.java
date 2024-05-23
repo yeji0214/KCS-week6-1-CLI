@@ -1,6 +1,6 @@
 package com.kiosk.order;
 
-import com.kiosk.menu.Drink;
+import com.kiosk.menu.drink.Drink;
 import com.kiosk.util.Constants;
 
 // 음료 주문 프로세스 관리

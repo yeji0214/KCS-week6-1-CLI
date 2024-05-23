@@ -1,13 +1,13 @@
 package com.kiosk.order;
 
 import com.kiosk.menu.MenuItem;
-import com.kiosk.menu.Toast;
-import com.kiosk.menu.Side;
-import com.kiosk.menu.Drink;
+import com.kiosk.menu.toast.Toast;
+import com.kiosk.menu.side.Side;
+import com.kiosk.menu.drink.Drink;
 import com.kiosk.menu.drink.*;
-import com.kiosk.menu.side.PotatoPop;
-import com.kiosk.menu.toast.*;
 import com.kiosk.util.Constants;
+
+import java.util.Dictionary;
 
 // 메뉴 출력
 public class MenuDisplayer {
@@ -18,40 +18,40 @@ public class MenuDisplayer {
     // 생성자에서 모든 메뉴 객체 생성
     public MenuDisplayer() {
         toasts = new Toast[]{
-                new PotatoSpecialToast(),
-                new BulgogiSpecialToast(),
-                new DoubleCheeseBulgogiToast(),
-                new ChickenSpecialToast(),
-                new HotBaconChickenToast(),
-                new HamCheeseToast(),
-                new FrenchHamCheeseToast(),
-                new HamSpecialToast(),
-                new BaconBestToast(),
-                new GrilledBulgogiToast(),
-                new GrilledBulgalbiToast(),
-                new BaconPotatoPizzaToast(),
-                new DeepCheeseBaconToast(),
-                new DeepCheeseBaconPotatoToast(),
-                new HamCheesePotatoToast(),
-                new HoneyGarlicHamCheeseToast(),
-                new CornCheeseToast(),
-                new ShrimpToast(),
-                new ChiliShrimpToast()
+                new Toast("감자 스페셜", 4700, false, true),
+                new Toast("불고기 스페셜", 5200, true, false),
+                new Toast("더블치즈 불고기", 5200, true, true),
+                new Toast("치킨 스페셜", 4800, true, false),
+                new Toast("핫 베이컨 치킨", 5900, false, true),
+                new Toast("햄치즈", 3400, true, true),
+                new Toast("프렌치 햄치즈", 3800, false, true),
+                new Toast("햄스페셜", 3800, true, true),
+                new Toast("베이컨 베스트", 4200, true, true),
+                new Toast("그릴드 불고기", 4600, false, false),
+                new Toast("그릴드 불갈비", 4900, false, true),
+                new Toast("베이컨 포테이토 피자", 5400, false, false),
+                new Toast("딥치즈 베이컨", 4500, false, false),
+                new Toast("딥치즈 베이컨 포테이토", 5200, false, false),
+                new Toast("햄치즈 포테이토", 4300, true, true),
+                new Toast("허니갈릭 햄치즈", 3900, false, true),
+                new Toast("콘치즈", 4600, false, true),
+                new Toast("새우", 4900, false, false),
+                new Toast("칠리새우", 4900, false, true)
         };
 
         sides = new Side[]{
-                new PotatoPop(true)
+                new Side("포테이토 팝", 2200, 0, true)
         };
 
         drinks = new Drink[]{
-                new AmericanoHot(),
-                new AmericanoIce(),
-                new IcedTea(),
-                new Cola(),
-                new ColaZero(),
-                new Sprite(),
-                new SpriteZero(),
-                new OrangeJuice()
+                new Drink("아메리카노 hot", 2900, 800),
+                new Drink("아메리카노 ice", 2900, 800),
+                new Drink("아이스티", 2900, 800),
+                new Drink("콜라", 2000, 0),
+                new Drink("콜라 제로", 2000, 0),
+                new Drink("사이다", 2000, 0),
+                new Drink("사이다 제로", 2000, 0),
+                new Drink("오렌지 주스", 2600, 600)
         };
     }
 

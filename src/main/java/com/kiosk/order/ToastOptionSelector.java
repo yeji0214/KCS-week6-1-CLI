@@ -1,6 +1,6 @@
 package com.kiosk.order;
 
-import com.kiosk.menu.Toast;
+import com.kiosk.menu.toast.Toast;
 import com.kiosk.util.Constants;
 
 // 토스트 옵션 선택 관리

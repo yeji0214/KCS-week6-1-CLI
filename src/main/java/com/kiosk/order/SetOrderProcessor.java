@@ -1,9 +1,8 @@
 package com.kiosk.order;
 
-import com.kiosk.menu.Drink;
-import com.kiosk.menu.Side;
-import com.kiosk.menu.Toast;
-import com.kiosk.menu.side.PotatoPop;
+import com.kiosk.menu.drink.Drink;
+import com.kiosk.menu.side.Side;
+import com.kiosk.menu.toast.Toast;
 import com.kiosk.util.Constants;
 
 // 세트 주문 프로세스 관리
@@ -47,7 +46,7 @@ public class SetOrderProcessor {
                 side = sides[choice - 1];
                 if (side.canChooseKetchup()) {
                     boolean ketchup = inputHandler.getBooleanInput(Constants.KETCHUP_PROMPT);
-                    ((PotatoPop) side).setKetchup(ketchup);
+                    side.setKetchup(ketchup);
                     if (!ketchup) toastSetName += Constants.KETCHUP_EXCLUDED_SUFFIX;
                 }
                 break;
