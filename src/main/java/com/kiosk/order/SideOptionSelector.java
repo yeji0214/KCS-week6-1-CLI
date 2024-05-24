@@ -7,10 +7,12 @@ import com.kiosk.util.Constants;
 public class SideOptionSelector {
     private final InputHandler inputHandler;
 
+    // 생성자: 입력 핸들러 초기화
     public SideOptionSelector(InputHandler inputHandler) {
         this.inputHandler = inputHandler;
     }
 
+    // 사이드 옵션 선택
     public void selectSideOptions(Side side) {
         if (side.canChooseKetchup()) { // 케첩을 선택할 수 있는 경우
             boolean ketchup = inputHandler.getBooleanInput(Constants.KETCHUP_PROMPT);

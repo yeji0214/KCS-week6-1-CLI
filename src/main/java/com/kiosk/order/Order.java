@@ -13,6 +13,7 @@ public class Order {
     private final PaymentProcessor paymentProcessor;
     private final MenuDisplayer menuDisplayer;
 
+    // 생성자: 모든 객체를 초기화
     public Order() {
         inputHandler = new InputHandler();
         toastOptionSelector = new ToastOptionSelector(inputHandler);
@@ -24,12 +25,13 @@ public class Order {
         drinkOrderProcessor = new DrinkOrderProcessor(inputHandler, menu);
     }
 
+    // 주문 프로세스 시작
     public void start() {
         greeting();
         getUserInput();
     }
 
-    // 인사말
+    // 인사말 출력
     private void greeting() {
         System.out.println(Constants.BORDER);
         System.out.println(Constants.STORE_NAME);
@@ -58,6 +60,7 @@ public class Order {
         }
     }
 
+    // 메뉴 보여주기
     public void showMenu() {
         menuDisplayer.showMainMenu(); // 메뉴 카테고리 보여주기
         while (true) {

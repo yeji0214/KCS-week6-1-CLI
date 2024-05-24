@@ -7,22 +7,23 @@ import com.kiosk.util.Constants;
 
 // 메뉴 항목 관리 (장바구니, 영수증, 총 가격)
 public class Menu {
-    private final List<MenuItem> cart = new ArrayList<>();
-    private final InputHandler inputHandler;
-    private final PaymentProcessor paymentProcessor;
-    private final Order order;
-    private int totalPrice = 0;
+    private final List<MenuItem> cart = new ArrayList<>(); // 장바구니 항목 리스트
+    private final InputHandler inputHandler; // 사용자 입력 핸들러
+    private final PaymentProcessor paymentProcessor; // 결제 프로세서
+    private final Order order; // 주문 객체
+    private int totalPrice = 0; // 총 가격
 
+    // 생성자: 입력 핸들러, 결제 프로세서, 주문 객체 초기화
     public Menu(InputHandler inputHandler, PaymentProcessor paymentProcessor, Order order) {
         this.inputHandler = inputHandler;
         this.paymentProcessor = paymentProcessor;
         this.order = order;
     }
 
-    // 장바구니에 담기
+    // 장바구니에 항목 추가
     public void addItemToCart(String name, int price, int quantity) {
         cart.add(new MenuItem(name, price, quantity));
-        totalPrice += price * quantity;
+        totalPrice += price * quantity; // 총 가격 업데이트
     }
 
     // 영수증 보여주기
@@ -56,7 +57,7 @@ public class Menu {
                     order.showMenu();
                     return;
                 default:
-                    System.out.println(Constants.INPUT_ERROR);
+                    System.out.println(Constants.INPUT_ERROR); // 잘못된 입력 처리
             }
         }
     }

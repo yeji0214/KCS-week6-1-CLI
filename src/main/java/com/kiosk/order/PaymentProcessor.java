@@ -7,10 +7,12 @@ import com.kiosk.util.Constants;
 public class PaymentProcessor {
     private final InputHandler inputHandler;
 
+    // 생성자: 입력 핸들러 초기화
     public PaymentProcessor(InputHandler inputHandler) {
         this.inputHandler = inputHandler;
     }
 
+    // 결제 처리
     public void processPayment(int totalPrice) {
         int paymentChoice = 0; // 결제 방식 (0: 나눠서 결제 1: 한번에 결제)
         int amountPaid = 0; // 지불한 금액

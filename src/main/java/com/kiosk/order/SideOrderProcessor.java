@@ -8,11 +8,13 @@ public class SideOrderProcessor {
     private final InputHandler inputHandler;
     private final Menu menu;
 
+    // 생성자: 입력 핸들러와 메뉴 객체 초기화
     public SideOrderProcessor(InputHandler inputHandler, Menu menu) {
         this.inputHandler = inputHandler;
         this.menu = menu;
     }
 
+    // 사이드 주문 처리
     public void processSideOrder() {
         MenuDisplayer menuDisplayer = new MenuDisplayer();
         menuDisplayer.showSideMenu();
@@ -33,6 +35,7 @@ public class SideOrderProcessor {
         }
     }
 
+    // 실제 주문을 처리하는 메서드
     private void processOrder(Side side) {
         int quantity = inputHandler.getQuantity();
         System.out.println("\n" + side.getName() + " - " + side.getPrice() + "원 x " + quantity + "개 = " + (side.getPrice() * quantity) + "원");

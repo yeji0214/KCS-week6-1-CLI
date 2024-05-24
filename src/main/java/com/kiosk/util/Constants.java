@@ -54,6 +54,7 @@ public class Constants {
     public static final String EGG_OPTION_PROMPT = "🍳 계란을 선택하세요 (1. 기본, 2. 스크램블(+600원)): ";
     public static final String SCRAMBLED_EGG_SUFFIX = " (스크램블)";
     public static final String VIEW_CAFFEINE_CONTENT_OPTION = "0. 각 음료의 카페인 함량 보기";
+    public static final String VIEW_TOAST_INGREDIENTS_OPTION = "0. 각 토스트의 재료 보기";
     public static final String DRINK_CAFFEINE_CONTENT_TITLE = "<Drink 카페인 함량>";
     public static final String TOAST_INGREDIENTS_TITLE = "<Toast 재료>";
     public static final int SET_PRICE = 2700;

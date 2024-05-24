@@ -4,30 +4,28 @@ import com.kiosk.menu.MenuItem;
 
 public class Side extends MenuItem {
     private int setPrice;
+    private boolean canChooseKetchup;
     private boolean ketchup; // PotatoPop의 속성 추가
 
-    public Side(String name, int price, int setPrice) {
-        super(name, price, 1);
-        this.setPrice = setPrice;
-    }
+//    public Side(String name, int price, int setPrice) {
+//        super(name, price, 1);
+//        this.setPrice = setPrice;
+//    }
 
     // 새로운 생성자 추가 (PotatoPop에서 사용한 생성자)
-    public Side(String name, int price, int setPrice, boolean ketchup) {
+    public Side(String name, int price, int setPrice, boolean canChooseKetchup) {
         super(name, price, 1);
         this.setPrice = setPrice;
-        this.ketchup = ketchup;
+        this.canChooseKetchup = canChooseKetchup;
+        this.ketchup = this.canChooseKetchup;
     }
 
     public boolean canChooseKetchup() {
-        return true; // 기본적으로 케첩 선택 가능
+        return canChooseKetchup;
     }
 
     public int getSetPrice() {
         return setPrice;
-    }
-
-    public boolean hasKetchup() {
-        return ketchup;
     }
 
     @Override

@@ -14,6 +14,7 @@ public class SetOrderProcessor {
     private final Side[] sides;
     private final Drink[] drinks;
 
+    // 생성자: 필요한 객체들을 초기화
     public SetOrderProcessor(Menu menu, InputHandler inputHandler, ToastOptionSelector toastOptionSelector, MenuDisplayer menuDisplayer, Side[] sides, Drink[] drinks) {
         this.menu = menu;
         this.inputHandler = inputHandler;
@@ -23,6 +24,7 @@ public class SetOrderProcessor {
         this.drinks = drinks;
     }
 
+    // 세트 주문 처리
     public void processSetOrder(Toast toast) {
         int quantity; // 수량
         int finalToastPrice; // 세트의 총 가격

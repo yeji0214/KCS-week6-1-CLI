@@ -11,6 +11,7 @@ public class ToastOrderProcessor {
     private final SetOrderProcessor setOrderProcessor;
     private final MenuDisplayer menuDisplayer;
 
+    // 생성자: 필요한 객체들을 초기화
     public ToastOrderProcessor(InputHandler inputHandler, Menu menu, ToastOptionSelector toastOptionSelector, MenuDisplayer menuDisplayer) {
         this.inputHandler = inputHandler;
         this.menu = menu;
@@ -19,6 +20,7 @@ public class ToastOrderProcessor {
         this.setOrderProcessor = new SetOrderProcessor(menu, inputHandler, toastOptionSelector, menuDisplayer, menuDisplayer.getSides(), menuDisplayer.getDrinks());
     }
 
+    // 토스트 주문 처리
     public void processToastOrder() {
         menuDisplayer.showToastMenu();
         Toast[] toastMenu = menuDisplayer.getToasts();
@@ -40,6 +42,7 @@ public class ToastOrderProcessor {
         }
     }
 
+    // 실제 주문을 처리하는 메서드
     private void processOrder(Toast toast) {
         toastOptionSelector.selectToastOptions(toast);
         int quantity = inputHandler.getQuantity();

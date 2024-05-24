@@ -11,13 +11,13 @@ import java.util.*;
 
 // 메뉴 출력
 public class MenuDisplayer {
-    private final Toast[] toasts;
-    private final Side[] sides;
-    private final Drink[] drinks;
+    private final Toast[] toasts; // 토스트 메뉴 배열
+    private final Side[] sides; // 사이드 메뉴 배열
+    private final Drink[] drinks; // 음료 메뉴 배열
 
     // 생성자에서 모든 메뉴 객체 생성
     public MenuDisplayer() {
-        // 토스트의 재료
+        // 토스트의 재료 맵
         Map<String, List<String>> ingredientsMap = new HashMap<>();
         ingredientsMap.put("Potato Special", Arrays.asList("계란", "콘", "베이컨", "해시브라운", "소스(스윗어니언, 스윗마요)", "양배추", "치즈"));
         ingredientsMap.put("Bulgogi Special", Arrays.asList("계란", "콘", "직화불고기", "소스(불고기, 스윗마요)", "양배추", "치즈"));
@@ -39,6 +39,7 @@ public class MenuDisplayer {
         ingredientsMap.put("Shrimp", Arrays.asList("계란", "콘", "치즈", "새우패티", "양배추", "피클", "소스(머스터드)"));
         ingredientsMap.put("Chili Shrimp", Arrays.asList("계란", "콘", "새우패티", "양배추", "피클", "소스(칠리, 핫스모크)"));
 
+        // 토스트 메뉴 객체 생성
         toasts = new Toast[]{
                 new Toast("감자 스페셜", 4700, false, true, ingredientsMap.get("Potato Special")),
                 new Toast("불고기 스페셜", 5200, true, false, ingredientsMap.get("Bulgogi Special")),
@@ -61,10 +62,12 @@ public class MenuDisplayer {
                 new Toast("칠리새우", 4900, false, true, ingredientsMap.get("Chili Shrimp"))
         };
 
+        // 사이드 메뉴 객체 생성
         sides = new Side[]{
                 new Side("포테이토 팝", 2200, 0, true)
         };
 
+        // 음료 메뉴 객체 생성
         drinks = new Drink[]{
                 new CaffeineDrink("아메리카노 hot", 2900, 800, 150),
                 new CaffeineDrink("아메리카노 ice", 2900, 800, 150),
@@ -144,7 +147,7 @@ public class MenuDisplayer {
             System.out.println((i + 1) + ". " + menu[i].getName() + " - " + menu[i].getPrice() + "원");
         }
         if (Objects.equals(title, Constants.TOAST_MENU_TITLE)) {
-            System.out.println("0. 각 토스트의 재료 보기");
+            System.out.println(Constants.VIEW_TOAST_INGREDIENTS_OPTION);
         }
         if (Objects.equals(title, Constants.DRINK_MENU_TITLE)) {
             System.out.println(Constants.VIEW_CAFFEINE_CONTENT_OPTION);
