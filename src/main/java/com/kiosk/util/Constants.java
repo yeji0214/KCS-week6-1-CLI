@@ -21,7 +21,7 @@ public class Constants {
     public static final String REMAINING_AMOUNT = "남은 금액: ";
     public static final String TOTAL_AMOUNT = "총 금액: ";
     public static final String CHANGE_MESSAGE = "거스름돈: ";
-    public static final String PAYMENT_COMPLETE = "🙇🏻‍ 결제가 완료되었습니다. 감사합니다! 🙇🏻‍";
+    public static final String PAYMENT_COMPLETE = "🙇🏻‍ 결제가 완료되었습니다. 감사합니다! 🙇🏻\n";
     public static final String SELECT_PROMPT = "선택: ";
     public static final String SELECT_SIDE_PROMPT = "🍟 사이드를 선택하세요: ";
     public static final String SELECT_DRINK_PROMPT = "🥤 음료를 선택하세요: ";
@@ -57,6 +57,14 @@ public class Constants {
     public static final String VIEW_TOAST_INGREDIENTS_OPTION = "0. 각 토스트의 재료 보기";
     public static final String DRINK_CAFFEINE_CONTENT_TITLE = "<Drink 카페인 함량>";
     public static final String TOAST_INGREDIENTS_TITLE = "<Toast 재료>";
+    public static final String ORDER_NUMBER_LABEL = "주문 번호: ";
+    public static final String MAIN_THREAD_INTERRUPTED_MESSAGE = "Main thread interrupted.";
+    public static final String ORDER_READY_MESSAGE = "\n\n메뉴가 준비되었습니다. 기다려주셔서 감사합니다.";
+    public static final String ENJOY_MESSAGE = "맛있게 드세요!😋";
+    public static final String ORDER_PREPARATION_INTERRUPTED_MESSAGE = "Order preparation interrupted.";
+    public static final String ORDER_READY_LABEL = "\r준비 완료: ";
+    public static final String NUMBER_SUFFIX = "번";
+    public static final String DISPLAY_BOARD_INTERRUPTED_MESSAGE = "Display board interrupted.";
     public static final int SET_PRICE = 2700;
     public static final int AMERICANO_ICED_TEA_EXTRA_COST = 800;
     public static final int ORANGE_JUICE_EXTRA_COST = 600;
