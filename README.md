@@ -2,7 +2,7 @@
 
 이삭토스트 키오스크 CLI 프로그램입니다.
 
-![Toast, Hash Brown, and Cola](images/toast_hashbrown_cola.webp)
+![Toast, Hash Brown, and Cola](src/images/toast_hashbrown_cola.webp)
 
 ## 프로젝트 구조
 ````css
