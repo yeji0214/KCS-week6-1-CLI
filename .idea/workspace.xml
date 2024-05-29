@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Create README.md">
+    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Add Image to README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -382,7 +382,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716998451103</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Add Image to README.md">
+      <option name="closed" value="true" />
+      <created>1716998574946</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1716998574946</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -397,7 +405,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Payment function" />
     <MESSAGE value="Change menu class creation format" />
     <MESSAGE value="Price modification (drink price in set, total price in set)" />
     <MESSAGE value="Separate package, folder" />
@@ -422,6 +429,7 @@
     <MESSAGE value="String constant processing &amp; annotation" />
     <MESSAGE value="Add CaffeineWarning(): high caffeine content caution string return function" />
     <MESSAGE value="Create README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create README.md" />
+    <MESSAGE value="Add Image to README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Image to README.md" />
   </component>
 </project>
