@@ -129,7 +129,7 @@ public class MenuDisplayer {
         System.out.println();
         for (int i = 0; i < drinks.length; i++) {
             if (drinks[i] instanceof CaffeineDrink) {
-                System.out.println((i + 1) + ". " + drinks[i].getName() + " - " + ((CaffeineDrink) drinks[i]).getCaffeineContent() + "mg");
+                System.out.println((i + 1) + ". " + drinks[i].getName() + " - " + ((CaffeineDrink) drinks[i]).getCaffeineContent() + "mg" + ((CaffeineDrink) drinks[i]).caffeineWarning());
             }
             else {
                 System.out.println((i + 1) + ". " + drinks[i].getName() + " - 0mg");
