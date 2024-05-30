@@ -7,7 +7,7 @@
 </div>
 
 ## 프로젝트 구조
-````css
+```
 src
 └── main
     └── java
@@ -42,7 +42,7 @@ src
                 └── util
                     └── Constants.java
 
-````
+```
 
 ### 디렉토리 설명
 
@@ -100,4 +100,49 @@ src
 
 ## 클래스 별 설명
 
-### 
+### menu
+| 클래스 명                 | 속성                                                                                                | 메서드                                                                                                                                                                       |
+|-----------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MenuItem.java         | • name: 메뉴명 <br> • price: 가격 <br> • quantity: 수량                                                  | • getName(): 메뉴명 반환<br>• setName(): 메뉴명 설정<br>• getPrice(): 가격 반환<br>• setPrice(): 가격 설정 <br> • getQuantity(): 수량 반환                                                      |
+| Toast.java            | • canChooseBread: 빵 선택이 가능한지<br> • canChooseEgg: 계란 선택이 가능한지<br> • ingredients: 토스트의 재료를 저장하는 리스트 | • canChooseBread(): 빵 선택 가능 여부 반환<br> • canChooseEgg(): 계란 선택 가능 여부 반환<br> • getIngredients(): 재료 반환                                                                      |
+| Side.java             | • setPrice: 토스트 세트에서 추가될 사이드 금액<br> • canChooseKetchup: 케첩 선택이 가능한지<br> • ketchup: 케첩 여부          | • canChooseKetchup(): 케첩 선택 가눙 여부 반환<br> • getSetPrice(): 토스트 세트에서 추가될 사이드 금액 반환<br> • getName(): 사이드 메뉴명 반환 (케첩을 선택하지 않은 경우 (케첩 X)라고 표기)<br> • setKetchup(): 케첩 선택 여부 설정 |
+| Drink.java            | • setPrice: 토스트 세트에서 추가될 음료 금액                                                                    | • getSetPrice(): 토스트 세트에서 추가될 음료 금액 반환                                                                                                                                    |
+| CaffeineDrink.java    | • caffeineContent: 카페인 함량(mg) | • getCaffeineContent(): 카페인 함량 반환 <br>• caffeineWarning(): 고카페인 함량 시 경고 문구 반환                                                                                             
+| NonCaffeineDrink.java |
+
+### order
+| 클래스 명                    |메서드|
+|--------------------------|---|
+| DrinkOrderProcessor.java |processDrinkOrder(): 음료를 선택하는 메서드<br>processOrder(): 음료 주문을 처리하는 메서드|
+| InputHandler.java        |getIntInput(): 정수를 입력받는 메서드 <br> getBooleanInput(): 옵션 선택을 입력받는 메서드 <br> getQuantity(): 수량을 입력받는 메서드|
+| Menu.java                |addItemToCart(): 장바구니에 항목을 추가하는 메서드 <br> showReceipt(): 영수증을 보여주는 메서드 <br> handleOrderOptions(): 메뉴 담기 옵션을 선택받는 메서드 <br> getTotalPrice(): 총 금액을 반환하는 메서드|
+| MenuDisplayer.java       |showMainMenu(): 메인 메뉴(카테고리)를 보여주는 메서드 <br> showToastMenu(): 토스트 메뉴를 보여주는 메서드 <br> showSideMenu(): 사이드 메뉴를 보여주는 메서드 <br> showDrinkMenu(): 음료 메뉴를 보여주는 메서드 <br> showToastIngredients(): 토스트 재료를 보여주는 메서드 <br> showDrinkCaffeine(): 음료 카페인 함량을 보여주는 메서드 <br> printMenu(): 메뉴판 출력 메서드 <br> getToasts(): 토스트 메뉴 반환 메서드 <br> getSides(): 사이드 메뉴 반환 메서드 <br> getDrinks(): 음료 메뉴 반환 메서드|
+| Order.java               |start(): 주문 프로세스 시작 메서드 <br> greeting(): 인사말 출력 메서드 <br> getUserInput(): 주문 여부를 입력받는 메서드 <br> showMenu(): 메뉴를 보여주는 메서드|
+|PaymentProcessor.java|processPayment(): 결제 처리를 담당하는 메서드|
+|SetOrderProcessor.java|processSetOrder(): 토스트 세트 주문을 처리하는 메서드|
+|SideOptionSelector.java|selectSideOptions(): 사이드 옵션을 선택하는 메서드|
+|SideOrderProcessor.java|processSideOrder(): 사이드를 선택하는 메서드 <br> processOrder(): 사이드 주문을 처리하는 메서드|
+|ToastOptionSelector.java|selectToastOptions(): 토스트 옵션을 선택하는 메서드|
+|ToastOrderProcessor.java|processToastOrder(): 토스트를 선택하는 메서드 <br> processOrder(): 토스트 주문을 처리하는 메서드 <br> selectToastOption(): 토스트 옵션(단품/세트)을 선택하는 메서드|
+
+### thread
+| 클래스 명                    | 속성 | 메서드    |
+|--------------------------|----|--------|
+|OrderPreparationThread.java|orderNumber: 주문 번호|run(): 주문 번호에 해당하는 시간(초)만큼 대기한 후, 준비 완료 메시지를 출력하는 메서드 <br> generateOrderNumber(): 1부터 20까지의 랜덤한 주문 번호를 생성하는 메서드
+|DisplayBoardThread.java|isOrderReady: 주문 준비 완료 여부를 나타내는 상태 변수 <br> maxOrderNumber: 최대 주문 번호|run(): 1초마다 숫자를 증가시켜 "준비 완료: X번" 메시지를 같은 줄에 출력하는 메서드 <br> setOrderReady(): 주문 준비 완료 상태를 설정하는 메서드|
+
+### 스레드 간 상호작용 과정 설명
+
+- OrderPreparationThread 실행 방식
+    - 주문 번호의 시간(초)만큼 대기한다.
+    - 대기 시간이 끝나면, displayBoardThread.setOrderReady() 를 호출하여 isOrderReady를 true로 설정한다.
+- DisplayBoardThread 실행 방식
+    - run()에서 isOrderReady 변수를 지속적으로 검사한다.
+    - isOrderReady가 false인 경우 1초마다 "준비 완료: X번" 메시지를 출력하며 숫자를 증가시킨다.
+- 상호작용 방식
+    - OrderPreparationThread가 isOrderReady를 true로 설정하면, DisplayBoardThread의 while 루프 조건이 false가 되어 루프를 종료한다.
+
+## 시연 영상
+<div align="center">
+    <iframe width="560" height="315" src="src/images/demo_video.mov" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

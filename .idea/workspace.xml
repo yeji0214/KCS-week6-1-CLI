@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Add Image to README.md">
+    <list default="true" id="8e80da64-c463-4690-8c97-c7dc7bf09d64" name="Changes" comment="Add UML diagram">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -390,7 +390,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716998574946</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Add UML diagram">
+      <option name="closed" value="true" />
+      <created>1717002399721</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1717002399721</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -405,7 +413,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change menu class creation format" />
     <MESSAGE value="Price modification (drink price in set, total price in set)" />
     <MESSAGE value="Separate package, folder" />
     <MESSAGE value="Separate Order.java" />
@@ -430,6 +437,7 @@
     <MESSAGE value="Add CaffeineWarning(): high caffeine content caution string return function" />
     <MESSAGE value="Create README.md" />
     <MESSAGE value="Add Image to README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Image to README.md" />
+    <MESSAGE value="Add UML diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add UML diagram" />
   </component>
 </project>
