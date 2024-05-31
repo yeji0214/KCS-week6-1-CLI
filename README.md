@@ -143,6 +143,4 @@ src
     - OrderPreparationThread가 isOrderReady를 true로 설정하면, DisplayBoardThread의 while 루프 조건이 false가 되어 루프를 종료한다.
 
 ## 시연 영상
-<div align="center">
-    <iframe width="560" height="315" src="src/images/demo_video.mov" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<img width="80%" src="{https://github.com/yeji0214/KCS-week6-1-CLI/assets/91647696/0d0d5a08-58f8-4472-abfe-d985a1515189}"/>
